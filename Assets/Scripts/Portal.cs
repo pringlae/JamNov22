@@ -12,7 +12,7 @@ public class Portal : MonoBehaviour
     [SerializeField] float fadeOutTime = 1f;
     [SerializeField] float fadeInTime = 1f;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    virtual protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent<Player>(out Player player))
         {
@@ -20,7 +20,7 @@ public class Portal : MonoBehaviour
         }
     }
 
-    private IEnumerator Transition()
+    protected IEnumerator Transition()
     {
         if (sceneToLoad < 0) yield break;
 

@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private int xInput;
     private Vector2 currentVelocity;
     private bool isJumping;
-    private Interactable interactTarget;
+    private IInteractable interactTarget;
 
     void Start()
     {
@@ -102,11 +102,11 @@ public class Player : MonoBehaviour
 
     private void OnInteractionInput()
     {
-        if (interactTarget)
-            print("interaction");
+        if (interactTarget != null)
+            interactTarget.Activate();
     }
 
-    public void CanInteract(Interactable target)
+    public void CanInteract(IInteractable target)
     {
         interactionBubble.SetActive(true);
         interactTarget = target;
