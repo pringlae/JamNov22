@@ -19,19 +19,18 @@ public class Player : MonoBehaviour
     private int xInput;
     private Vector2 currentVelocity;
     private bool isJumping;
-    private Interactable interactTarget;
+    private IInteractable interactTarget;
 
     void Awake()
     {
         instance = this;
+        anim = GetComponent<Animator>();
+        inputHandler = GetComponent<PlayerInputHandler>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
     {
-        anim = GetComponent<Animator>();
-        inputHandler = GetComponent<PlayerInputHandler>();
-        rb = GetComponent<Rigidbody2D>();
-
         facingDirection = 1;
         inputHandler.onInteractionInput = OnInteractionInput;
     }
@@ -109,11 +108,11 @@ public class Player : MonoBehaviour
 
     private void OnInteractionInput()
     {
-        if (interactTarget)
-            print("interaction");
+        if (interactTarget != null)
+            interactTarget.Activate();
     }
 
-    public void CanInteract(Interactable target)
+    public void CanInteract(IInteractable target)
     {
         interactionBubble.SetActive(true);
         interactTarget = target;
@@ -123,5 +122,11 @@ public class Player : MonoBehaviour
     {
         interactionBubble.SetActive(false);
         interactTarget = null;
+    }
+
+    private void OnDisable()
+    {
+        if (gameObject != null)
+            rb.velocity = Vector2.zero;
     }
 }
