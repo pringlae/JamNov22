@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance { get; private set; }
+
     [SerializeField] private PlayerData playerData;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius;
@@ -18,6 +20,11 @@ public class Player : MonoBehaviour
     private Vector2 currentVelocity;
     private bool isJumping;
     private Interactable interactTarget;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
