@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
+    public System.Action onInteractionInput;
     public Vector2 RawMovementInput { get; private set; }
     public int NormInputX { get; private set; }
     public int NormInputY { get; private set; }
@@ -43,6 +44,14 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    public void OnInteractionInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            onInteractionInput();
+        }
+    }
+
     public void UseJumpInput() => JumpInput = false;
 
     private void CheckJumpInputHoldTime()
@@ -52,7 +61,6 @@ public class PlayerInputHandler : MonoBehaviour
             JumpInput = false;
         }
     }
-
 
 }
 
