@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private GameObject interactionBubble;
 
     private Animator anim;
     private Rigidbody2D rb;
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     private int xInput;
     private Vector2 currentVelocity;
     private bool isJumping;
+    private Interactable interactTarget;
 
     void Start()
     {
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         facingDirection = 1;
+        inputHandler.onInteractionInput = OnInteractionInput;
     }
 
     private void Update()
@@ -42,7 +45,7 @@ public class Player : MonoBehaviour
         CheckJumpMultiplier();
     }
 
-    public void CheckIfShouldFlip(int xInput)
+    private void CheckIfShouldFlip(int xInput)
     {
         if (xInput != 0 && xInput != facingDirection)
         {
@@ -50,7 +53,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Flip()
+    private void Flip()
     {
         facingDirection *= -1;
         rb.transform.Rotate(0.0f, 180.0f, 0.0f);
@@ -68,7 +71,7 @@ public class Player : MonoBehaviour
         rb.velocity = currentVelocity;
     }
 
-    public bool CanJump()
+    private bool CanJump()
     {
 
         return IsGround();
@@ -95,5 +98,23 @@ public class Player : MonoBehaviour
     public bool IsGround()
     {
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+    }
+
+    private void OnInteractionInput()
+    {
+        if (interactTarget)
+            print("interaction");
+    }
+
+    public void CanInteract(Interactable target)
+    {
+        interactionBubble.SetActive(true);
+        interactTarget = target;
+    }
+
+    public void CanNotInteract()
+    {
+        interactionBubble.SetActive(false);
+        interactTarget = null;
     }
 }
