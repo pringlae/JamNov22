@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PopupText : MonoBehaviour
+public class PopupText : PopupElement
 {
     public static PopupText Instance;
     private Camera _camera;
-    private TextMeshProUGUI textMesh;
+    private TextMeshProUGUI _textMesh;
+    private RectTransform _transform;
 
     private void Awake()
     {
@@ -16,20 +17,19 @@ public class PopupText : MonoBehaviour
     private void Start()
     {
         _camera = Camera.main;
-        textMesh = GetComponentInChildren<TextMeshProUGUI>();
-        gameObject.SetActive(false);
-
+        _textMesh = GetComponentInChildren<TextMeshProUGUI>();
+        _transform = GetComponent<RectTransform>();
     }
 
     public void Setup(Transform spot, string text)
     {
-        textMesh.text = text;
-        transform.position = RectTransformUtility.WorldToScreenPoint(_camera, spot.position + Vector3.up * 0.5f);
-        gameObject.SetActive(true);
+        _textMesh.text = text;
+        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, spot.position + Vector3.up * 0.5f);
+        ShowHide(true);
     }
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        ShowHide(false);
     }
 }

@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Help : MonoBehaviour
+public class Help : PopupElement
 {
     public static Help instance;
-    [SerializeField] private GameObject _gameobject;
     [SerializeField] private TextMeshProUGUI _textMesh;
     [SerializeField] private string[] _hints;
 
@@ -19,12 +18,12 @@ public class Help : MonoBehaviour
 
     public void Show()
     {
-        _gameobject.SetActive(true);
+        ShowHide(true);
     }
 
     public void Hide()
     {
-        _gameobject.SetActive(false);
+        ShowHide(false);
     }
 
 }
