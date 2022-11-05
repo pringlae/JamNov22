@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuestList : MonoBehaviour
+public class QuestList : PopupElement
 {
     public static QuestList instance;
     [SerializeField] private Image _image;
@@ -18,11 +18,11 @@ public class QuestList : MonoBehaviour
 
     public void Show()
     {
-        _image.enabled = true;
+        ShowHide(true);
     }
 
     public void Close()
     {
-        _image.enabled = false;
+        ShowHide(false);
     }
 }

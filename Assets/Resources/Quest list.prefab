@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7817561051965594308}
   - component: {fileID: 7817561051965594307}
   - component: {fileID: 7817561051965594306}
+  - component: {fileID: 3185836173034085259}
   m_Layer: 5
   m_Name: Quest list
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7817561051965594304}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -88,4 +89,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f5ce0e45aadc9941b209ef99c2e376e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fadeInTime: 0.3
+  _fadeOutTime: 0.3
+  canvasGroup: {fileID: 3185836173034085259}
   _image: {fileID: 7817561051965594307}
+--- !u!225 &3185836173034085259
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817561051965594304}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
