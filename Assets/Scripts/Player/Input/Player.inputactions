@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "QuestList",
+                    "type": "Button",
+                    "id": "6fe0f91b-7e88-49f4-80e7-744c78ec645c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -161,6 +170,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "InteractOnItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68457187-14ca-4250-81b6-4c2299e734e3",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "QuestList",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50e21238-3f69-4b24-848b-ae6060ad30b9",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "QuestList",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -431,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_ActionId
@@ -441,12 +441,47 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[3].m_ActionName
       value: Gameplay/InteractOnItem[/Mouse/leftButton]
       objectReference: {fileID: 0}
+    - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1397798588}
+    - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnQuestListInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerInputHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436936258009401371, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4436936258009401374, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+--- !u!114 &1397798588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4436936258009401373, guid: fd277d6886fe9fe40b70a12f65b43bcc, type: 3}
+  m_PrefabInstance: {fileID: 1397798587}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a71f6ef08203a046b2e6864d809ad6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1409593559
 GameObject:
   m_ObjectHideFlags: 0
