@@ -6,8 +6,11 @@ public class Player : MonoBehaviour
 {
     public static Player instance { get; private set; }
 
+    public Vector3 DialoguePosition => dialoguePosition.position;
+    public bool CanMove { get; set; } = true;
+
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform groundCheck, dialoguePosition;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private GameObject interactionBubble;
@@ -37,16 +40,19 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        xInput = inputHandler.NormInputX;
-        currentVelocity = rb.velocity;
-
-        CheckIfShouldFlip(xInput);
-        SetVelocityX(playerData.movementVelocity * xInput);
-        if (inputHandler.JumpInput && CanJump())
+        if (CanMove)
         {
-            isJumping = true;
-            inputHandler.UseJumpInput();
-            SetVelocityY(playerData.jumpVelocity);
+            xInput = inputHandler.NormInputX;
+            currentVelocity = rb.velocity;
+
+            CheckIfShouldFlip(xInput);
+            SetVelocityX(playerData.movementVelocity * xInput);
+            if (inputHandler.JumpInput && CanJump())
+            {
+                isJumping = true;
+                inputHandler.UseJumpInput();
+                SetVelocityY(playerData.jumpVelocity);
+            }
         }
         CheckJumpMultiplier();
     }
