@@ -904,12 +904,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8362484970478700639, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: spawnPoint
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8362484970478700639, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 8291093869225794422, guid: 146dd3f5030988b49945c5335ae49200, type: 3}
+      objectReference: {fileID: 8291093869225794422, guid: 805e8544d9e6b674f9da4ad09bd9dc9c, type: 3}
     - target: {fileID: 8362484970478700641, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_Name
       value: PortalLeft
