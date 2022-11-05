@@ -62,5 +62,18 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    public void OnQuestListInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            QuestList.instance.Show(); print("sss");
+        }
+
+        if (context.canceled)
+        {
+            QuestList.instance.Close();
+        }
+    }
+
 }
 
