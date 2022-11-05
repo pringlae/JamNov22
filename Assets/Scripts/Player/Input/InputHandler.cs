@@ -80,6 +80,15 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""1ea2970d-a7d7-42ab-af2e-3043f50f683c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -247,6 +256,28 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                     ""action"": ""Help"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd48b738-6946-4ca6-98f0-53fdaf963f24"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87fa9f07-6345-4763-a733-6dba009af26c"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -284,6 +315,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
         m_Gameplay_InteractOnItem = m_Gameplay.FindAction("InteractOnItem", throwIfNotFound: true);
         m_Gameplay_QuestList = m_Gameplay.FindAction("QuestList", throwIfNotFound: true);
         m_Gameplay_Help = m_Gameplay.FindAction("Help", throwIfNotFound: true);
+        m_Gameplay_Menu = m_Gameplay.FindAction("Menu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -349,6 +381,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_InteractOnItem;
     private readonly InputAction m_Gameplay_QuestList;
     private readonly InputAction m_Gameplay_Help;
+    private readonly InputAction m_Gameplay_Menu;
     public struct GameplayActions
     {
         private @InputHandler m_Wrapper;
@@ -359,6 +392,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
         public InputAction @InteractOnItem => m_Wrapper.m_Gameplay_InteractOnItem;
         public InputAction @QuestList => m_Wrapper.m_Gameplay_QuestList;
         public InputAction @Help => m_Wrapper.m_Gameplay_Help;
+        public InputAction @Menu => m_Wrapper.m_Gameplay_Menu;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -386,6 +420,9 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 @Help.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHelp;
                 @Help.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHelp;
                 @Help.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHelp;
+                @Menu.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
+                @Menu.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
+                @Menu.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -408,6 +445,9 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 @Help.started += instance.OnHelp;
                 @Help.performed += instance.OnHelp;
                 @Help.canceled += instance.OnHelp;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
             }
         }
     }
@@ -438,5 +478,6 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
         void OnInteractOnItem(InputAction.CallbackContext context);
         void OnQuestList(InputAction.CallbackContext context);
         void OnHelp(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
     }
 }

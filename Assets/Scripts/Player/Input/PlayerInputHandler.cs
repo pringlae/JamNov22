@@ -29,6 +29,7 @@ public class PlayerInputHandler : MonoBehaviour
         input.Gameplay.QuestList.canceled += OnQuestListCanceled;
         input.Gameplay.Help.performed += OnHelpPerformed;
         input.Gameplay.Help.canceled += OnHelpCanceled;
+        input.Gameplay.Menu.performed += OnMenuPressed;
     }
 
     private void OnEnable()
@@ -101,5 +102,9 @@ public class PlayerInputHandler : MonoBehaviour
         Help.instance.Hide();
     }
 
+    private void OnMenuPressed(InputAction.CallbackContext context)
+    {
+        PauseMenu.instance.ShowHide();
+    }
 }
 
