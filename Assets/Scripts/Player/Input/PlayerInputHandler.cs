@@ -27,6 +27,8 @@ public class PlayerInputHandler : MonoBehaviour
         input.Gameplay.Interact.performed += OnInteractionPerformed;
         input.Gameplay.QuestList.performed += OnQuestListPerformed;
         input.Gameplay.QuestList.canceled += OnQuestListCanceled;
+        input.Gameplay.Help.performed += OnHelpPerformed;
+        input.Gameplay.Help.canceled += OnHelpCanceled;
     }
 
     private void OnEnable()
@@ -87,6 +89,16 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnQuestListCanceled(InputAction.CallbackContext context)
     {
         QuestList.instance.Close();
+    }
+
+    public void OnHelpPerformed(InputAction.CallbackContext context)
+    {
+        Help.instance.Show();
+    }
+
+    public void OnHelpCanceled(InputAction.CallbackContext context)
+    {
+        Help.instance.Hide();
     }
 
 }

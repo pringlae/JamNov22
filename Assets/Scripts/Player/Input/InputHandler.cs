@@ -71,6 +71,15 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Help"",
+                    ""type"": ""Button"",
+                    ""id"": ""33c79af6-2c03-4765-bfad-6d14c4929526"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -216,6 +225,28 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                     ""action"": ""QuestList"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dab1d144-2112-4c70-a126-636f5423f873"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Help"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3cef6cf6-53c9-46f8-b796-da065a4021ed"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Help"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -252,6 +283,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
         m_Gameplay_InteractOnItem = m_Gameplay.FindAction("InteractOnItem", throwIfNotFound: true);
         m_Gameplay_QuestList = m_Gameplay.FindAction("QuestList", throwIfNotFound: true);
+        m_Gameplay_Help = m_Gameplay.FindAction("Help", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -316,6 +348,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Interact;
     private readonly InputAction m_Gameplay_InteractOnItem;
     private readonly InputAction m_Gameplay_QuestList;
+    private readonly InputAction m_Gameplay_Help;
     public struct GameplayActions
     {
         private @InputHandler m_Wrapper;
@@ -325,6 +358,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputAction @InteractOnItem => m_Wrapper.m_Gameplay_InteractOnItem;
         public InputAction @QuestList => m_Wrapper.m_Gameplay_QuestList;
+        public InputAction @Help => m_Wrapper.m_Gameplay_Help;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -349,6 +383,9 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 @QuestList.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQuestList;
                 @QuestList.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQuestList;
                 @QuestList.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQuestList;
+                @Help.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHelp;
+                @Help.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHelp;
+                @Help.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHelp;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -368,6 +405,9 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 @QuestList.started += instance.OnQuestList;
                 @QuestList.performed += instance.OnQuestList;
                 @QuestList.canceled += instance.OnQuestList;
+                @Help.started += instance.OnHelp;
+                @Help.performed += instance.OnHelp;
+                @Help.canceled += instance.OnHelp;
             }
         }
     }
@@ -397,5 +437,6 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnInteractOnItem(InputAction.CallbackContext context);
         void OnQuestList(InputAction.CallbackContext context);
+        void OnHelp(InputAction.CallbackContext context);
     }
 }
