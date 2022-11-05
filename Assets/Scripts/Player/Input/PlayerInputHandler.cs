@@ -10,14 +10,50 @@ public class PlayerInputHandler : MonoBehaviour
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
 
+    private InputHandler input;
+
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
     private float jumpInputStartTime;
 
+    private void Awake()
+    {
+        input = new InputHandler();
+        input.Gameplay.Jump.performed += OnJumpPerformed;
+        input.Gameplay.Jump.canceled += OnJumpCanceled;
+        input.Gameplay.Movement.performed += OnMoveInput;
+        input.Gameplay.Movement.canceled += OnMoveInput;
+        input.Gameplay.Interact.performed += OnInteractionPerformed;
+        input.Gameplay.QuestList.performed += OnQuestListPerformed;
+        input.Gameplay.QuestList.canceled += OnQuestListCanceled;
+    }
+
+    private void OnEnable()
+    {
+        input.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.Disable();
+    }
+
     private void Update()
     {
         CheckJumpInputHoldTime();
+    }
+
+    public void OnJumpPerformed(InputAction.CallbackContext context)
+    {
+        JumpInput = true;
+        JumpInputStop = false;
+        jumpInputStartTime = Time.time;
+    }
+
+    public void OnJumpCanceled(InputAction.CallbackContext context)
+    {
+        JumpInputStop = true;
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -28,28 +64,9 @@ public class PlayerInputHandler : MonoBehaviour
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
 
     }
-
-    public void OnJumpInput(InputAction.CallbackContext context)
+    public void OnInteractionPerformed(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            JumpInput = true;
-            JumpInputStop = false;
-            jumpInputStartTime = Time.time;
-        }
-
-        if (context.canceled)
-        {
-            JumpInputStop = true;
-        }
-    }
-
-    public void OnInteractionInput(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            onInteractionInput();
-        }
+        onInteractionInput();
     }
 
     public void UseJumpInput() => JumpInput = false;
@@ -62,17 +79,14 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    public void OnQuestListInput(InputAction.CallbackContext context)
+    public void OnQuestListPerformed(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            QuestList.instance.Show(); print("sss");
-        }
+        QuestList.instance.Show();
+    }
 
-        if (context.canceled)
-        {
-            QuestList.instance.Close();
-        }
+    public void OnQuestListCanceled(InputAction.CallbackContext context)
+    {
+        QuestList.instance.Close();
     }
 
 }
