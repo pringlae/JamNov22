@@ -53,10 +53,7 @@ MonoBehaviour:
   _fadeInTime: 0.3
   _fadeOutTime: 0.3
   canvasGroup: {fileID: 4385102958580279926}
-  _gameobject: {fileID: 6841903944975582167}
   _textMesh: {fileID: 6841903945369119020}
-  _hints:
-  - "\u041F\u043E\u0434\u0441\u043A\u0430\u0437\u043A\u0430 1"
 --- !u!225 &4385102958580279926
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -104,11 +101,11 @@ RectTransform:
   m_Father: {fileID: 6841903944716820610}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 688.995, y: 439}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 1, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &6841903944975582160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -137,8 +134,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: b4f24ba8b613f1d4c84de21e841de855, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -219,8 +216,8 @@ RectTransform:
   m_Father: {fileID: 6841903944975582164}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -315,7 +312,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 10, y: 10, z: 10, w: 10}
+  m_margin: {x: 10, y: 30, z: 100, w: 30}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
