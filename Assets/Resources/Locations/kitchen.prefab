@@ -55,6 +55,10 @@ MonoBehaviour:
   - {fileID: 4224464597103549420}
   CameraSize: 1.9
   CameraBounds: {fileID: 292823235389160709}
+  objectConditions:
+  - obj: {fileID: 2042152476929612007}
+    eventKey: item_taken_bucket
+    onlyDisable: 0
 --- !u!1 &375761666910815785
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +916,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
+--- !u!1 &2042152476929612007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7854101677176815135, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
+  m_PrefabInstance: {fileID: 8117862605185263352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2042152476929611994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}

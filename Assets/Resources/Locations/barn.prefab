@@ -53,6 +53,7 @@ MonoBehaviour:
   - {fileID: 2091210422394120271}
   CameraSize: 2.3
   CameraBounds: {fileID: 292823235389160709}
+  objectConditions: []
 --- !u!1 &375761666910815785
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 358454711406678550}
     m_Modifications:
+    - target: {fileID: 5166480813271970824, guid: b372fab422d0cb443875a0b2db275f2b, type: 3}
+      propertyPath: Id
+      value: bucket
+      objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970825, guid: b372fab422d0cb443875a0b2db275f2b, type: 3}
       propertyPath: m_Name
       value: Bucket

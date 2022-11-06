@@ -29,6 +29,7 @@ public class Item : InteractTarget
         transform.localScale = _startScale * 2;
         Inventory.Instance.SetHighlighted(Inventory.Instance.MouseOnInventory);
         _isDragging = true;
+        QuestSystem.OnQuestEvent("item_taken_" + Id);
     }
 
     void Update()
