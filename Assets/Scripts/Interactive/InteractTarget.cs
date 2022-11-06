@@ -40,4 +40,9 @@ public class InteractTarget : MonoBehaviour
         if (!_nearBy && _highlight != null)
             _highlight.enabled = false;
     }
+
+    void OnEnable()
+    {
+        if (_highlight != null) _highlight.enabled = false;
+    }
 }

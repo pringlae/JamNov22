@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3566276383704190387}
   - component: {fileID: 8291093869225794422}
   m_Layer: 0
-  m_Name: Barn
+  m_Name: barn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,6 +747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 358454711406678550}
     m_Modifications:
+    - target: {fileID: 5166480813271970824, guid: 4cc140227c0835f478df3df530f3850e, type: 3}
+      propertyPath: Id
+      value: lamp
+      objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970825, guid: 4cc140227c0835f478df3df530f3850e, type: 3}
       propertyPath: m_Name
       value: Lamp

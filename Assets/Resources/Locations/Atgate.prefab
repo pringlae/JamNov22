@@ -630,14 +630,24 @@ PrefabInstance:
       objectReference: {fileID: 8291093869225794422, guid: 146dd3f5030988b49945c5335ae49200, type: 3}
     - target: {fileID: 1361322529706296335, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: Name
-      value: "\u041A\u0443\u0445\u043D\u044F"
+      value: "\u0412 \u043F\u0435\u0449\u0435\u0440\u0443"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
       value: Cave SP
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1361322529706296334, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+--- !u!1 &1289806245207952885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1361322529706296330, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+  m_PrefabInstance: {fileID: 216784465137109503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1289806245207952883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
@@ -648,6 +658,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
   m_PrefabInstance: {fileID: 216784465137109503}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2885218791845704851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289806245207952885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d763c4bec52e4c8449023edd5d45f64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: 0
+  destination: {fileID: 8291093869225794422, guid: 146dd3f5030988b49945c5335ae49200, type: 3}
 --- !u!1001 &1221311860072184865
 PrefabInstance:
   m_ObjectHideFlags: 0
