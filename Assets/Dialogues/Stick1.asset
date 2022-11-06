@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 279cb073ac7ad304385103e9dff605be, type: 3}
-  m_Name: npc 1
+  m_Name: Stick1
   m_EditorClassIdentifier: 
   speeches:
   - isPlayer: 1
-    text: "\u041F\u0440\u0438\u0432\u0435\u0442"
-  - isPlayer: 0
-    text: "\u041F\u0440\u0438\u0432\u0435\u0442"
-  - isPlayer: 1
-    text: "\u041D\u0443, \u043F\u043E\u043A\u0430!"
+    text: "\u041D\u0435\u0442, \u044D\u0442\u0430 \u043F\u0430\u043B\u043A\u0430
+      \u043A\u043E\u0440\u043E\u0442\u043A\u0430"
