@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PuzzlePiece : MonoBehaviour, IPointerDownHandler
 {
-    public string ItemId;
     public Sprite Sprite { get; private set; }
     public RectTransform rectTransform { get; private set; }
 

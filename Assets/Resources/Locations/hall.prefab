@@ -853,6 +853,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5465836081430416676, guid: 5355e85005da2f842938a38d8e40b347, type: 3}
+      propertyPath: _minigamePrefab
+      value: 
+      objectReference: {fileID: 2848395092670918794, guid: 0dd9af2fcaeaf7b4e81e3a78daa852ce, type: 3}
     - target: {fileID: 7223314185209702188, guid: 5355e85005da2f842938a38d8e40b347, type: 3}
       propertyPath: m_Name
       value: PuzzleOnFloor

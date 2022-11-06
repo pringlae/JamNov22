@@ -23,7 +23,10 @@ public class InteractWithMinigame : MonoBehaviour, IInteractable
             _minigamePrefab.Launch((success) =>
             {
                 if (success)
+                {
                     QuestSystem.OnQuestEvent(_succesfullyCompletedQuestKey);
+                    _minigameCompleted = true;
+                }
             });
     }
 }
