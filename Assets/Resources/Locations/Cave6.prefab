@@ -763,6 +763,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3566276383704190387}
     m_Modifications:
+    - target: {fileID: 5166480813271970824, guid: efb3391c6cb39e34ab79d69b007b9cf5, type: 3}
+      propertyPath: Id
+      value: worms
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166480813271970824, guid: efb3391c6cb39e34ab79d69b007b9cf5, type: 3}
+      propertyPath: Name
+      value: "\u0427\u0435\u0440\u0432\u0438"
+      objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970825, guid: efb3391c6cb39e34ab79d69b007b9cf5, type: 3}
       propertyPath: m_Name
       value: Worms

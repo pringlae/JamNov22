@@ -168,6 +168,9 @@ MonoBehaviour:
   - obj: {fileID: 6854315324275544359}
     eventKey: item_taken_bucket
     OnKeyPresent: 0
+  - obj: {fileID: 7277671226907297087}
+    eventKey: item_taken_worms
+    OnKeyPresent: 0
 --- !u!1 &323535983756535451
 GameObject:
   m_ObjectHideFlags: 0
