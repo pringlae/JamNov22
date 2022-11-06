@@ -59,7 +59,7 @@ public class DialogueBubble : PopupElement
     {
         if (canvasGroup.alpha > 0.1f)
         {
-            _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, anchor.position);
+            _transform.anchoredPosition = Camera.main.WorldToScreenPoint(anchor.position) / Screen.width * 1920;
         }
     }
     public void Hide()

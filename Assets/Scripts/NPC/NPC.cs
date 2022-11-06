@@ -25,6 +25,7 @@ public class NPC : MonoBehaviour, IInteractable
         if (other.gameObject == Player.instance.gameObject)
         {
             //_bubble.SetActive(false);
+            Player.instance.CanMove = true;
         }
         else if (other.gameObject == _hoveredItem.gameObject)
         {

@@ -423,6 +423,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e49b3a209141ba44c8da00c8ed9e48e7, type: 3}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6598939962033759571, guid: fe735375419607f478096b179d055724, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1200

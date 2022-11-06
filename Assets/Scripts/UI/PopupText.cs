@@ -24,7 +24,7 @@ public class PopupText : PopupElement
     public void Setup(Transform spot, string text)
     {
         _textMesh.text = text;
-        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, spot.position + Vector3.up * 0.5f);
+        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, spot.position + Vector3.up * 0.5f) / Screen.width * 1920;
         ShowHide(true);
     }
 

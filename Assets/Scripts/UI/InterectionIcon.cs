@@ -23,13 +23,13 @@ public class InterectionIcon : PopupElement
 
     private void Update()
     {
-        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, _pos);
+        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, _pos) / Screen.width * 1920;
     }
     public void Setup(Transform spot)
     {
         _spot = spot;
         _pos = spot.position + Vector3.up * 0.5f;
-        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, _pos);
+        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, _pos) / Screen.width * 1920;
         ShowHide(true);
     }
 

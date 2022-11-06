@@ -88,7 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feed8734b019f464baed703268c0aca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: puzzle_4
 --- !u!1 &3461287294307578118
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feed8734b019f464baed703268c0aca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: puzzle_2
 --- !u!1 &3815278682597040045
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feed8734b019f464baed703268c0aca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: puzzle_5
 --- !u!1 &4719609705768344506
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feed8734b019f464baed703268c0aca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: puzzle_1
 --- !u!1 &5218433421636858569
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feed8734b019f464baed703268c0aca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: puzzle_3
 --- !u!1 &6055023970428294383
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feed8734b019f464baed703268c0aca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: puzzle_6
 --- !u!1001 &2419265707624263741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,9 +571,37 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1440411289349550894, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 182.63
+      objectReference: {fileID: 0}
     - target: {fileID: 3534099025332261721, guid: fe735375419607f478096b179d055724, type: 3}
       propertyPath: m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: ee01bacf76c41454192e258e14215a8c, type: 3}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327736754601548617, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6598939962033759571, guid: fe735375419607f478096b179d055724, type: 3}
       propertyPath: m_SizeDelta.x
