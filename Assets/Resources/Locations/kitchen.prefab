@@ -57,7 +57,7 @@ MonoBehaviour:
   CameraBounds: {fileID: 292823235389160709}
   objectConditions:
   - obj: {fileID: 2042152476929612007}
-    eventKey: item_taken_bucket
+    eventKey: item_taken_stick3
     OnKeyPresent: 0
 --- !u!1 &375761666910815785
 GameObject:
