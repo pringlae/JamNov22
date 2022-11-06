@@ -282,4 +282,4 @@ MonoBehaviour:
   _fadeOutTime: 0.3
   canvasGroup: {fileID: 7887809914622479388}
   _commonSprite: {fileID: 21300000, guid: 84105a92097b0b046ac5ab40110e8c84, type: 3}
-  _forDedSprite: {fileID: 21300000, guid: 48c4f8e2caf29fa449e9d310afd8808b, type: 3}
+  _forDedSprite: {fileID: 21300000, guid: d6dfccc751f8bf348a3cb6ea05fe42bc, type: 3}

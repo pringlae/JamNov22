@@ -74,7 +74,7 @@ public class Ded : NPC
         }
         var speech = _dialogueData.speeches[_currentSpeech];
         var pos = speech.isPlayer ? Player.instance.DialoguePosition : _bubblePosition;
-        DialogueBubble.instance.Setup(pos, speech.text);
+        DialogueBubble.instance.Setup(pos, speech.text, !speech.isPlayer);
     }
 
     protected override void StartDialogue()
