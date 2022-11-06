@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4bbb7c6bab2d942b5089a3b68c4a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: "\u0421\u0435\u043C\u0435\u0439\u043D\u043E\u0435 \u0444\u043E\u0442\u043E"
+  Name: "\u0414\u0435\u0434"
   _highlight: {fileID: 0}
 --- !u!61 &7277671226907297084
 BoxCollider2D:
@@ -1004,7 +1004,7 @@ PrefabInstance:
       objectReference: {fileID: 8291093869225794422, guid: ddae5d4e491a7a0478bb0b2910290f89, type: 3}
     - target: {fileID: 1361322529706296335, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: Name
-      value: "\u0414\u0435\u0440\u0435\u0432\u043D\u044F"
+      value: "\u0414\u0432\u043E\u0440\u0438\u043A"
       objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
