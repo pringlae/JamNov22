@@ -1453,19 +1453,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1505,11 +1505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 756
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 6841903944716820610, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1538,14 +1538,6 @@ PrefabInstance:
     - target: {fileID: 6841903944975582164, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -573
-      objectReference: {fileID: 0}
-    - target: {fileID: 6841903945369119023, guid: 2d65663ea8be9194c9919def645db130, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6841903945369119023, guid: 2d65663ea8be9194c9919def645db130, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6841903945369119023, guid: 2d65663ea8be9194c9919def645db130, type: 3}
       propertyPath: m_SizeDelta.x
