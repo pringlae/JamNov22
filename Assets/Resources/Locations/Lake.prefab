@@ -163,6 +163,7 @@ MonoBehaviour:
   - {fileID: 3183183323813899710}
   CameraSize: 5
   CameraBounds: {fileID: 8955615988641771524}
+  objectConditions: []
 --- !u!1 &323535983756535451
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,8 +807,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d890fe09f0315f4eb2c643b48548f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minigamePrefab: {fileID: 8412097136399422380, guid: 112ae33ffd2fa1745bd9343851a9a46f, type: 3}
+  _minigamePrefab: {fileID: 8840490478572151569, guid: f9d9347322e1d244ea3b7cafa9b03afc, type: 3}
   _succesfullyCompletedQuestKey: fishingDone
+  _preventOpenAgain: 0
 --- !u!1001 &1226582350892035952
 PrefabInstance:
   m_ObjectHideFlags: 0
