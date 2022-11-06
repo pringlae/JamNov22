@@ -36,22 +36,28 @@ public class QuestSystem : MonoBehaviour
         switch (id)
         {
             case "start":
-                PlayerSay("Какой отличный день! Вот бы сходить на рыбалку");
-                QuestList.instance.AddQuest("go_fishing", "Пойти на рыбалку", 3);
-                Help.instance.SetHints("Отправляйся к озеру");
+                PlayerSay("Какой отличный день! вот бы сходить на рыбалку!", "Надо взять ведро");
+                QuestList.instance.AddQuest("Bucket", "Найти ведро", 3);
+                Help.instance.SetHints("Ведра обычно хранятся в сарае", "Пазлы хранят секрет");
                 break;
-            case "interact_first_time_lake":
-                PlayerSay("Так, а как рыбу ловить? Кажется я что-то забыл...");
-                QuestList.instance.RemoveQuest("go_fishing", 2);
-                QuestList.instance.AddQuest("get_ready_for_fishing", "Найди удочку", 3);
+            case "ded_dialogue_end_0":
+                PlayerSay("Точно! дед ловил рыбу не лапами, а какой-то палкой");
+                QuestList.instance.RemoveQuest("Bucket", 2);
+                QuestList.instance.AddQuest("Stick", "Найти удочку", 3);
+                Help.instance.SetHints("Найти хорошую палку");
                 break;
-            case "interact_barn_lock":
-                PlayerSay("Какой отличный день! Вот бы сходить на рыбалку");
-                QuestList.instance.RemoveQuest("go_fishing", 2);
-                QuestList.instance.AddQuest("get_ready_for_fishing", "Найди удочку", 3);
+            case "ded_dialogue_end_1":
+                PlayerSay("Хм, и где же мне их найти?");
+                QuestList.instance.RemoveQuest("Stick", 2);
+                QuestList.instance.AddQuest("Tickle", "Найти снасти", 3);
+                Help.instance.SetHints("В журнале иногда пишут полезную информацию");
                 break;
-
-
+            case "ded_dialogue_end_2":
+                PlayerSay("Вроде бы черви хорошо подойдут");
+                QuestList.instance.RemoveQuest("Tickle", 2);
+                QuestList.instance.AddQuest("Worms", "Найти наживку - черви", 3);
+                Help.instance.SetHints("В пещере водятся хорошие черви", "Фонарик можно найти на площади", "Кто-то повесил карту верх ногами");
+                break;
         }
     }
 
