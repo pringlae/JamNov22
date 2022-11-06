@@ -35,6 +35,8 @@ public class Map : MonoBehaviour
         _inTransition = true;
         Player.instance.enabled = false;
         yield return StartCoroutine(_fader.FadeIn());
+        QuestList.instance.Close();
+        DialogueBubble.instance.Hide();
 
         Location locationPrefab = _loadedLocations.Find((loc) => loc.Id == location.Id);
         if (locationPrefab == null)

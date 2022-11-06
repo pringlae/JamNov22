@@ -45,5 +45,5 @@ public class QuestSystem : MonoBehaviour
         }
     }
 
-    private static void PlayerSay(string text) => DialogueBubble.instance.Setup(Player.instance.DialoguePosition, text);
+    private static void PlayerSay(string text) => DialogueBubble.instance.Setup(Player.instance.DialoguePosition, text, 4);
 }

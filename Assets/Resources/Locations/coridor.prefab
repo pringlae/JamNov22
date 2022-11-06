@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d890fe09f0315f4eb2c643b48548f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minigamePrefab: {fileID: 6708366049935909356, guid: cb6b31daf3916454bb41ff28913870bf, type: 3}
+  _minigamePrefab: {fileID: 3744403148717672507, guid: cb6b31daf3916454bb41ff28913870bf, type: 3}
   _succesfullyCompletedQuestKey: photoframeInspected
 --- !u!1001 &3228520008485454206
 PrefabInstance:
