@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12dd32e2d0990845bb783e63a51aff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startLocation: {fileID: 8291093869225794422, guid: 61ccd7d16b8e8d94d9811673c30b82a6, type: 3}
+  _startLocation: {fileID: 8291093869225794422, guid: aa0ea6115d5e4244288c684280660797, type: 3}
   _maxLocationsLoaded: 8
   _locationNameText: {fileID: 0}
   _fader: {fileID: 0}
+  CurrentLocation: {fileID: 0}

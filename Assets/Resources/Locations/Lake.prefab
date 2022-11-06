@@ -571,8 +571,9 @@ GameObject:
   - component: {fileID: 7277671226907297082}
   - component: {fileID: 7277671226907297085}
   - component: {fileID: 7277671226907297084}
+  - component: {fileID: 3352537329929941648}
   m_Layer: 9
-  m_Name: Interactable
+  m_Name: FishingInteract
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -586,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7277671226907297087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.47, y: -1.87, z: 0.92361385}
+  m_LocalPosition: {x: 10.56, y: -1.12, z: 0.92361385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3566276383704190387}
@@ -655,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4bbb7c6bab2d942b5089a3b68c4a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: "\u0420\u044B\u0431\u0430\u043B\u043A\u0430"
 --- !u!61 &7277671226907297084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -682,6 +683,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3352537329929941648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277671226907297087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d890fe09f0315f4eb2c643b48548f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minigamePrefab: {fileID: 8412097136399422380, guid: 112ae33ffd2fa1745bd9343851a9a46f, type: 3}
+  _succesfullyCompletedQuestKey: fishingDone
 --- !u!1001 &69368683399409020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -847,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: e5bc3d9353902ec49a05d492e32171ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.10206
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: e5bc3d9353902ec49a05d492e32171ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1047,13 +1062,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
---- !u!4 &3183183324137785262 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8362484970478700638, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
-  m_PrefabInstance: {fileID: 6350484046287671280}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3183183323813899710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8362484970129515086, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
+  m_PrefabInstance: {fileID: 6350484046287671280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3183183324137785262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8362484970478700638, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
   m_PrefabInstance: {fileID: 6350484046287671280}
   m_PrefabAsset: {fileID: 0}

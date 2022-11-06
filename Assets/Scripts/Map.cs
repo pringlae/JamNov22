@@ -59,6 +59,7 @@ public class Map : MonoBehaviour
         locationPrefab.gameObject.SetActive(true);
 
         Player.instance.transform.position = locationPrefab.SpawnPoints[spawnPointIndex].transform.position;
+        Camera.main.orthographicSize = locationPrefab.CameraSize;
 
         yield return _fader.FadeOut();
 
