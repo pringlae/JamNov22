@@ -23,21 +23,21 @@ public class Ded : NPC
             {
                 return;
             }
-            if (QuestSystem.IsEventCompleted("item_taken_tackle"))
+            if (Inventory.Instance.CurrentItem != null && Inventory.Instance.CurrentItem.Id == "tackle")
             {
                 _currentDialogueIndex = 2;
                 _dialogueData = _dialogues[2];
                 Player.instance.CanInteract(instance);
                 Activate();
             }
-            if (QuestSystem.IsEventCompleted("item_taken_stick3"))
+            if (Inventory.Instance.CurrentItem != null && Inventory.Instance.CurrentItem.Id == "stick3")
             {
                 _currentDialogueIndex = 1;
                 _dialogueData = _dialogues[1];
                 Player.instance.CanInteract(instance);
                 Activate();
             }
-            if (QuestSystem.IsEventCompleted("item_taken_bucket"))
+            if (Inventory.Instance.CurrentItem != null && Inventory.Instance.CurrentItem.Id == "bucket")
             {
                 _currentDialogueIndex = 0;
                 _dialogueData = _dialogues[0];

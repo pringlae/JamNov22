@@ -775,6 +775,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3566276383704190387}
     m_Modifications:
     - target: {fileID: 5166480813271970824, guid: 7c594012b84969c488f02cdbf4b6d5ed, type: 3}
+      propertyPath: Id
+      value: stick3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166480813271970824, guid: 7c594012b84969c488f02cdbf4b6d5ed, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
