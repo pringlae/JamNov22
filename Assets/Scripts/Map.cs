@@ -46,17 +46,36 @@ public class Map : MonoBehaviour
 
         foreach (var condition in CurrentLocation.objectConditions)
         {
-            if (!QuestSystem.IsEventCompleted(condition.eventKey))
+            if (QuestSystem.IsEventCompleted(condition.eventKey))
             {
-                if (condition.onlyDisable)
-                    condition.obj.GetComponent<InteractTarget>().enabled = false;
-                else
-                    condition.obj.SetActive(false);
+                switch (condition.OnKeyPresent)
+                {
+                    case Location.EnableObjectCondition.KeyPresentType.Enable:
+                        condition.obj.SetActive(true);
+                        condition.obj.GetComponent<InteractTarget>().enabled = true;
+                        break;
+                    case Location.EnableObjectCondition.KeyPresentType.Disable:
+                        condition.obj.SetActive(false);
+                        break;
+                    case Location.EnableObjectCondition.KeyPresentType.DeactivateAction:
+                        condition.obj.SetActive(true);
+                        condition.obj.GetComponent<InteractTarget>().enabled = false;
+                        break;
+                }
             }
             else
             {
-                condition.obj.SetActive(true);
-                condition.obj.GetComponent<InteractTarget>().enabled = true;
+                switch (condition.OnKeyPresent)
+                {
+                    case Location.EnableObjectCondition.KeyPresentType.Enable:
+                        condition.obj.SetActive(false);
+                        break;
+                    case Location.EnableObjectCondition.KeyPresentType.Disable:
+                    case Location.EnableObjectCondition.KeyPresentType.DeactivateAction:
+                        condition.obj.SetActive(true);
+                        condition.obj.GetComponent<InteractTarget>().enabled = true;
+                        break;
+                }
             }
         }
 

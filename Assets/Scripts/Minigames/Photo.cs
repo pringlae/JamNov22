@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class Photo : Minigame
 {
-
+    protected override void StartMinigame()
+    {
+        base.StartMinigame();
+        _success = true;
+    }
 }

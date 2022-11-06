@@ -6,6 +6,7 @@ public class InteractWithMinigame : MonoBehaviour, IInteractable
 {
     [SerializeField] protected Minigame _minigamePrefab;
     [SerializeField] protected string _succesfullyCompletedQuestKey;
+    [SerializeField] protected bool _preventOpenAgain = false;
 
     protected bool _minigameCompleted;
 
@@ -16,13 +17,13 @@ public class InteractWithMinigame : MonoBehaviour, IInteractable
 
     public virtual void Activate()
     {
-        if (!_minigameCompleted)
+        if (_minigameCompleted && _preventOpenAgain)
+            DialogueBubble.instance.Setup(Player.instance.DialoguePosition, "Мне это больше не нужно.");
+        else
             _minigamePrefab.Launch((success) =>
             {
                 if (success)
                     QuestSystem.OnQuestEvent(_succesfullyCompletedQuestKey);
             });
-        else
-            DialogueBubble.instance.Setup(Player.instance.DialoguePosition, "Мне это больше не нужно.");
     }
 }

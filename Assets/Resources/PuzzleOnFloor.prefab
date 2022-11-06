@@ -543,6 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minigamePrefab: {fileID: 2848395092670918794, guid: 9a5753a40a0ac0a47b7ac87ca965406e, type: 3}
   _succesfullyCompletedQuestKey: puzzleCompleted
+  _preventOpenAgain: 1
 --- !u!114 &3171702663502052598
 MonoBehaviour:
   m_ObjectHideFlags: 0

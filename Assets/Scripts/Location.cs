@@ -15,7 +15,11 @@ public class Location : MonoBehaviour
     {
         public GameObject obj;
         public string eventKey;
-        public bool onlyDisable;
+        public enum KeyPresentType
+        {
+            Enable, Disable, DeactivateAction
+        }
+        public KeyPresentType OnKeyPresent;
     }
 
     public EnableObjectCondition[] objectConditions = new EnableObjectCondition[0];
