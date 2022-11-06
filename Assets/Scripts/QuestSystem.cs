@@ -24,6 +24,7 @@ public class QuestSystem : MonoBehaviour
     public static void OnQuestEvent(string id)
     {
         instance.completedEvents.Add(id);
+        Map.Instance.UpdateItemsOnLocation();
 
         switch (id)
         {

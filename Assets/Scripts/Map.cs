@@ -44,6 +44,25 @@ public class Map : MonoBehaviour
         _loadedLocations.Add(locationPrefab);
         CurrentLocation = locationPrefab;
 
+        UpdateItemsOnLocation();
+
+        _locationNameText.text = locationPrefab.VisibleName;
+
+        foreach (var locPrefab in _loadedLocations)
+            locPrefab.gameObject.SetActive(false);
+        locationPrefab.gameObject.SetActive(true);
+
+        Player.instance.transform.position = locationPrefab.SpawnPoints[spawnPointIndex].transform.position;
+        Camera.main.orthographicSize = locationPrefab.CameraSize;
+
+        yield return _fader.FadeOut();
+
+        Player.instance.enabled = true;
+        _inTransition = false;
+    }
+
+    public void UpdateItemsOnLocation()
+    {
         foreach (var condition in CurrentLocation.objectConditions)
         {
             if (QuestSystem.IsEventCompleted(condition.eventKey))
@@ -68,19 +87,5 @@ public class Map : MonoBehaviour
                 }
             }
         }
-
-        _locationNameText.text = locationPrefab.VisibleName;
-
-        foreach (var locPrefab in _loadedLocations)
-            locPrefab.gameObject.SetActive(false);
-        locationPrefab.gameObject.SetActive(true);
-
-        Player.instance.transform.position = locationPrefab.SpawnPoints[spawnPointIndex].transform.position;
-        Camera.main.orthographicSize = locationPrefab.CameraSize;
-
-        yield return _fader.FadeOut();
-
-        Player.instance.enabled = true;
-        _inTransition = false;
     }
 }

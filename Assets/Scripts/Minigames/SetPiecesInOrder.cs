@@ -10,7 +10,6 @@ public class SetPiecesInOrder : Minigame
     private static Image _greySprite = null;
 
     private Dictionary<PuzzlePiece, Image> _places = new Dictionary<PuzzlePiece, Image>();
-    private bool _solvable = true;
 
     protected override void StartMinigame()
     {
@@ -21,39 +20,17 @@ public class SetPiecesInOrder : Minigame
         if (_greySprite == null)
             _greySprite = Resources.Load<Image>("GreySprite");
 
-        var itemsOnLocation = Map.Instance.CurrentLocation.GetComponentsInChildren<Item>();
         foreach (var item in itemsToOrder)
         {
-            bool found = false;
-            foreach (var itemOnLoc in itemsOnLocation)
-            {
-                if (itemOnLoc.Id == item.ItemId)
-                {
-                    found = true;
-                    break;
-                }
-            }
-
             var greyCopy = Object.Instantiate(_greySprite, transform);
-            greyCopy.name = item.ItemId;
+            greyCopy.name = item.name;
             greyCopy.rectTransform.anchoredPosition = item.rectTransform.anchoredPosition;
             greyCopy.rectTransform.localScale = item.rectTransform.localScale;
             greyCopy.rectTransform.sizeDelta = item.rectTransform.sizeDelta;
             greyCopy.sprite = item.Sprite;
             
-            if (found)
-            {
-                item.rectTransform.anchoredPosition += new Vector2(Random.value * 500 - 250, Random.value * 500 - 250);
-                _places[item] = greyCopy;
-            }
-            else
-            {
-                item.gameObject.SetActive(false);
-                _solvable = false;
-                enabled = false;
-                infoText.text = "Недостаточно деталей, чтобы собрать пазл";
-                infoText.gameObject.SetActive(true);
-            }
+            item.rectTransform.anchoredPosition += new Vector2(Random.value * 500 - 250, Random.value * 500 - 250);
+            _places[item] = greyCopy;
         }
 
         infoText.text = "Пазл собран!";
@@ -69,8 +46,8 @@ public class SetPiecesInOrder : Minigame
 
     public override void Close()
     {
-        if (_solvable)
-            _success = CheckEverythingInPlace();
+        enabled = false;
+        _success = CheckEverythingInPlace();
         base.Close();
     }
 

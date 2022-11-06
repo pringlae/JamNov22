@@ -11,6 +11,12 @@ public class PopupElement : MonoBehaviour
 
     virtual public void ShowHide(bool show)
     {
+        if (!gameObject.activeSelf)
+        {
+            canvasGroup.alpha = show ? 1 : 0;
+            return;
+        }
+
         StopAllCoroutines();
         if (show)
             StartCoroutine(On());

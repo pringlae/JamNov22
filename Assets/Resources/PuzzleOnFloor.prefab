@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2160514345156082588}
   - component: {fileID: 1604391766361312522}
-  - component: {fileID: 7115151378768456363}
   m_Layer: 0
   m_Name: puzzlePieceItem
   m_TagString: Untagged
@@ -83,21 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7115151378768456363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4994843235620483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  _highlight: {fileID: 0}
-  Id: puzzle_1
 --- !u!1 &1675648859471601819
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2227867191873499866}
   - component: {fileID: 6723166545253256272}
-  - component: {fileID: 6265869870426109012}
   m_Layer: 0
   m_Name: puzzlePieceItem (3)
   m_TagString: Untagged
@@ -181,21 +164,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6265869870426109012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675648859471601819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  _highlight: {fileID: 0}
-  Id: puzzle_4
 --- !u!1 &4565427634282831234
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3981662129798437485}
   - component: {fileID: 2070133843740675035}
-  - component: {fileID: 8355007605861240455}
   m_Layer: 0
   m_Name: puzzlePieceItem (1)
   m_TagString: Untagged
@@ -279,21 +246,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8355007605861240455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4565427634282831234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  _highlight: {fileID: 0}
-  Id: puzzle_2
 --- !u!1 &5587604639463248893
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +256,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4627182368517366047}
   - component: {fileID: 4518448715753794298}
-  - component: {fileID: 3959419627835004340}
   m_Layer: 0
   m_Name: puzzlePieceItem (5)
   m_TagString: Untagged
@@ -377,21 +328,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3959419627835004340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5587604639463248893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  _highlight: {fileID: 0}
-  Id: puzzle_5
 --- !u!1 &6000860320675343498
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +338,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1484105940241351071}
   - component: {fileID: 4051549818097723366}
-  - component: {fileID: 2420756104238039948}
   m_Layer: 0
   m_Name: puzzlePieceItem (2)
   m_TagString: Untagged
@@ -475,21 +410,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2420756104238039948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6000860320675343498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  _highlight: {fileID: 0}
-  Id: puzzle_3
 --- !u!1 &7223314185209702188
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +514,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2129647631964982284}
   - component: {fileID: 3174477150120320416}
-  - component: {fileID: 5574974115189754592}
   m_Layer: 0
   m_Name: puzzlePieceItem (4)
   m_TagString: Untagged
@@ -667,18 +586,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5574974115189754592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7635210184736265227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  _highlight: {fileID: 0}
-  Id: puzzle_6
