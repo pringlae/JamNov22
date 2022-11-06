@@ -664,6 +664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToBarn
       objectReference: {fileID: 0}
+    - target: {fileID: 1361322529706296330, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_RootOrder
       value: 3
