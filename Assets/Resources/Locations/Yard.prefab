@@ -96,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0143636465, y: -0.33118993}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1980653, y: 1.6623799}
   m_EdgeRadius: 0
 --- !u!1 &195206383126293768
 GameObject:
@@ -139,6 +139,7 @@ Transform:
   m_Children:
   - {fileID: 8187120773727011771}
   - {fileID: 7696128746550979729}
+  - {fileID: 5293631524269653720}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -162,6 +163,8 @@ MonoBehaviour:
   - {fileID: 7277671228243844719}
   - {fileID: 34826399804392814}
   - {fileID: 5162895053532185706}
+  CameraSize: 4
+  CameraBounds: {fileID: 3306934363639404980}
 --- !u!1 &2931378700429923632
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8362484970129515087, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_Name
-      value: Right SP
+      value: Lake SP
       objectReference: {fileID: 0}
     - target: {fileID: 8362484970478700638, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_RootOrder
@@ -604,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 8291093869225794422, guid: af0e8931de2267845b9bfaae9b304f67, type: 3}
     - target: {fileID: 8362484970478700641, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_Name
-      value: Portal Right
+      value: ToLake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
@@ -627,7 +630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1361322529706296330, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
-      value: DoorBarn
+      value: ToBarn
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_RootOrder
@@ -635,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.03
+      value: -0.83
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -676,14 +679,14 @@ PrefabInstance:
     - target: {fileID: 1361322529706296334, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 8291093869225794422, guid: cf8e8a0a9ba4d834d92a9c361378b3a4, type: 3}
+      objectReference: {fileID: 8291093869225794422, guid: 18b5b0874ff75364ea0c878e143bac18, type: 3}
     - target: {fileID: 1361322529706296335, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: Name
       value: "\u0421\u0430\u0440\u0430\u0439"
       objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
-      value: Door SP
+      value: Barn SP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
@@ -697,6 +700,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
   m_PrefabInstance: {fileID: 1591437053658390524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4659422573554140864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3566276383704190387}
+    m_Modifications:
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.4825506
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6229151
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.92361385
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875968282881417076, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_Size.x
+      value: 18.422943
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875968282881417076, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_Size.y
+      value: 11.049586
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875968282881417076, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.2608838
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875968282881417076, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5556321
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791091455583559180, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+      propertyPath: m_Name
+      value: CameraBounds
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+--- !u!4 &5293631524269653720 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 711386187109464088, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+  m_PrefabInstance: {fileID: 4659422573554140864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &3306934363639404980 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7875968282881417076, guid: 168f6b43f16be23468f586b929a6a452, type: 3}
+  m_PrefabInstance: {fileID: 4659422573554140864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5892986839777550072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,7 +792,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1361322529706296330, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
-      value: DoorHouse
+      value: ToHouse
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_RootOrder
@@ -714,7 +800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 3.82
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -762,7 +848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
-      value: Door SP
+      value: House SP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
@@ -793,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8362484970129515087, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_Name
-      value: Left SP
+      value: Cave SP
       objectReference: {fileID: 0}
     - target: {fileID: 8362484970478700638, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_RootOrder
@@ -849,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 8291093869225794422, guid: 805e8544d9e6b674f9da4ad09bd9dc9c, type: 3}
     - target: {fileID: 8362484970478700641, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_Name
-      value: PortalLeft
+      value: ToCave
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
@@ -872,7 +958,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1361322529706296330, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
-      value: DoorSquare
+      value: ToVillage
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_RootOrder
@@ -880,7 +966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.71
+      value: 9.63
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -928,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
-      value: Door SP
+      value: Village SP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}

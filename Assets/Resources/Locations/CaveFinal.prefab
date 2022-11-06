@@ -46,11 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab906217b7a1c24ea6ad2a0b3c9d355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 5
+  Id: 0
   VisibleName: "\u041F\u0435\u0449\u0435\u0440\u0430"
   SpawnPoints:
   - {fileID: 7943190307116387397}
   - {fileID: 6130045152028147937}
+  CameraSize: 4
+  CameraBounds: {fileID: 0}
 --- !u!1 &647459783512968702
 GameObject:
   m_ObjectHideFlags: 0

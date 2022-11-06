@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab906217b7a1c24ea6ad2a0b3c9d355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 8
+  Id: 3
   VisibleName: "\u041A\u043E\u0440\u0438\u0434\u043E\u0440"
   SpawnPoints:
   - {fileID: 8956930716893212461}
@@ -720,6 +720,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.8092733
       objectReference: {fileID: 0}
+    - target: {fileID: 1361322529706296331, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -795,7 +799,7 @@ PrefabInstance:
     - target: {fileID: 1361322529706296334, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 8291093869225794422}
+      objectReference: {fileID: 8291093869225794422, guid: ddcd61155b7c5bf40829458d3a974fde, type: 3}
     - target: {fileID: 1361322529706296335, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: Name
       value: "\u041A\u0443\u0445\u043D\u044F"
@@ -1111,12 +1115,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296334, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: spawnPoint
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1361322529706296334, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 8291093869225794422, guid: ddae5d4e491a7a0478bb0b2910290f89, type: 3}
+      objectReference: {fileID: 8291093869225794422, guid: 796f2c75862f3f54db281ce3c84e1c78, type: 3}
     - target: {fileID: 1361322529706296335, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: Name
       value: "\u0414\u0435\u0442\u0441\u043A\u0430\u044F"
