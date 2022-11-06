@@ -281,4 +281,3 @@ MonoBehaviour:
   _fadeInTime: 0.3
   _fadeOutTime: 0.3
   canvasGroup: {fileID: 7887809914622479388}
-  _offsetY: 1
