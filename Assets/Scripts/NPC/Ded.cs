@@ -5,14 +5,25 @@ using UnityEngine;
 
 public class Ded : NPC
 {
+    public static Ded instance;
     [SerializeField] protected DialogueData[] _dialogues;
 
+
+    private void Awake()
+    {
+        instance = this;
+    }
     protected override void OnTriggerEnter2D(Collider2D other)
     {
     }
 
     protected override void OnTriggerExit2D(Collider2D other)
     {
+    }
+
+    public static void StartIteraction()
+    {
+        Player.instance.CanInteract(instance);
     }
 
     public override void Activate()

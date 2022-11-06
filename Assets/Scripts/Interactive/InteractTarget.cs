@@ -15,6 +15,8 @@ public class InteractTarget : MonoBehaviour
             if (_interactScript == null) _interactScript = GetComponent<IInteractable>();
             Player.instance.CanInteract(_interactScript);
             if (_highlight != null) _highlight.enabled = true;
+
+            InterectionIcon.Instance.Setup(transform);
         }
     }
 
@@ -25,6 +27,8 @@ public class InteractTarget : MonoBehaviour
             _nearBy = false;
             Player.instance.CanNotInteract(_interactScript);
             if (_highlight != null) _highlight.enabled = false;
+
+            InterectionIcon.Instance.Hide(transform);
         }
     }
 
