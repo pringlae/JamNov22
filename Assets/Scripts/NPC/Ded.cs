@@ -21,13 +21,13 @@ public class Ded : NPC
             {
                 return;
             }
-            if (QuestSystem.IsEventCompleted("item_taken_stick3"))
+            if (QuestSystem.IsEventCompleted("item_taken_tackle"))
             {
                 _dialogueData = _dialogues[2];
                 Player.instance.CanInteract(instance);
                 Activate();
             }
-            if (QuestSystem.IsEventCompleted("item_taken_tackle"))
+            if (QuestSystem.IsEventCompleted("item_taken_stick3"))
             {
                 _dialogueData = _dialogues[1];
                 Player.instance.CanInteract(instance);
