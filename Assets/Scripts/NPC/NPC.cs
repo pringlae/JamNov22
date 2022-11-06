@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, IInteractable
 {
-    [SerializeField] private DialogueData _dialogueData;
+    [SerializeField] protected DialogueData _dialogueData;
     [SerializeField] private GameObject _bubble;
-    [SerializeField] private Transform _bubblePosition;
-    private int _currentSpeech = -1;
+    [SerializeField] protected Transform _bubblePosition;
+    protected int _currentSpeech = -1;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == Player.instance.gameObject)
         {
@@ -15,7 +15,7 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject == Player.instance.gameObject)
         {
@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    public void Activate()
+    public virtual void Activate()
     {
         if (_currentSpeech == -1)
         {
@@ -40,12 +40,12 @@ public class NPC : MonoBehaviour, IInteractable
         DialogueBubble.instance.Setup(pos, speech.text);
     }
 
-    private void StartDialogue()
+    protected virtual void StartDialogue()
     {
         _bubble.SetActive(false);
         Player.instance.CanMove = false;
     }
-    private void StopDialogue()
+    protected virtual void StopDialogue()
     {
         DialogueBubble.instance.Hide();
         Player.instance.CanNotInteract(this);
