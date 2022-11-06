@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5166480813271970837}
   - component: {fileID: 5166480813271970836}
   m_Layer: 8
-  m_Name: Stone
+  m_Name: Worms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

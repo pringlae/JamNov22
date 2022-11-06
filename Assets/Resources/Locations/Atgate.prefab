@@ -163,6 +163,10 @@ MonoBehaviour:
   - {fileID: 7277671228243844719}
   CameraSize: 4
   CameraBounds: {fileID: 6807568129575166822}
+  objectConditions:
+  - obj: {fileID: 6222379844913193199}
+    eventKey: item_taken_bucket
+    OnKeyPresent: 0
 --- !u!1 &1399724966551213967
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +837,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3566276383704190387}
     m_Modifications:
+    - target: {fileID: 7374265297431643205, guid: 4ab84d8d03d69c84f98fc071a4907454, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815135, guid: 4ab84d8d03d69c84f98fc071a4907454, type: 3}
       propertyPath: m_Name
       value: stick3
@@ -883,6 +891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab84d8d03d69c84f98fc071a4907454, type: 3}
+--- !u!1 &6222379844913193199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7854101677176815135, guid: 4ab84d8d03d69c84f98fc071a4907454, type: 3}
+  m_PrefabInstance: {fileID: 4225795217899757296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6222379844913193170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7854101677176815138, guid: 4ab84d8d03d69c84f98fc071a4907454, type: 3}

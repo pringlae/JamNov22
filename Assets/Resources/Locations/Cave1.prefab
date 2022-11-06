@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 6566510415157906586}
   CameraSize: 5
   CameraBounds: {fileID: 3275548750038996849}
+  objectConditions: []
 --- !u!1 &512597010458863794
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6329190051522037566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58, y: -2.62, z: -0.63911456}
+  m_LocalPosition: {x: -0.58, y: -3.66, z: -0.63911456}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3566276383704190387}
@@ -896,6 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minigamePrefab: {fileID: 3744403148717672507, guid: 461e23506c3b7db4e86a7a6cbf219133, type: 3}
   _succesfullyCompletedQuestKey: 
+  _preventOpenAgain: 0
 --- !u!1001 &1888805644646182411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1164,6 +1166,10 @@ PrefabInstance:
       propertyPath: Name
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.76
+      objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
       value: AtGateC SP
@@ -1184,7 +1190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8362484970129515086, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.77
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 8362484970129515086, guid: f5e9d4031970c61429d016d9c2368ace, type: 3}
       propertyPath: m_LocalPosition.y
