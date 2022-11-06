@@ -17,9 +17,25 @@ public class Ded : NPC
     {
         if (other.gameObject == Player.instance.gameObject)
         {
+            if (QuestSystem.IsEventCompleted("item_taken_worms"))
+            {
+                return;
+            }
             if (QuestSystem.IsEventCompleted("item_taken_bucket"))
             {
                 _dialogueData = _dialogues[0];
+                Player.instance.CanInteract(instance);
+                Activate();
+            }
+            if (QuestSystem.IsEventCompleted("item_taken_tacle"))
+            {
+                _dialogueData = _dialogues[1];
+                Player.instance.CanInteract(instance);
+                Activate();
+            }
+            if (QuestSystem.IsEventCompleted("item_taken_stick3"))
+            {
+                _dialogueData = _dialogues[2];
                 Player.instance.CanInteract(instance);
                 Activate();
             }

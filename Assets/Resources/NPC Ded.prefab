@@ -241,3 +241,5 @@ MonoBehaviour:
   _bubblePosition: {fileID: 4330052238520603177}
   _dialogues:
   - {fileID: 11400000, guid: 6be1d172a5cb54e478cbffc86cf2609c, type: 2}
+  - {fileID: 11400000, guid: 22d6dfc2014c88a43b39ce72be80bf8f, type: 2}
+  - {fileID: 11400000, guid: ce266d867d80906438536e1923465fc8, type: 2}
