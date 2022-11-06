@@ -58,7 +58,7 @@ MonoBehaviour:
   objectConditions:
   - obj: {fileID: 2042152476929612007}
     eventKey: item_taken_bucket
-    OnKeyPresent: 0
+    OnKeyPresent: 1
 --- !u!1 &375761666910815785
 GameObject:
   m_ObjectHideFlags: 0
