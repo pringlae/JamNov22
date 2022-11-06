@@ -61,17 +61,7 @@ public class Map : MonoBehaviour
                         condition.obj.SetActive(true);
                         condition.obj.GetComponent<InteractTarget>().enabled = false;
                         break;
-                }
-            }
-            else
-            {
-                switch (condition.OnKeyPresent)
-                {
-                    case Location.EnableObjectCondition.KeyPresentType.Enable:
-                        condition.obj.SetActive(false);
-                        break;
-                    case Location.EnableObjectCondition.KeyPresentType.Disable:
-                    case Location.EnableObjectCondition.KeyPresentType.DeactivateAction:
+                    case Location.EnableObjectCondition.KeyPresentType.ActivateAction:
                         condition.obj.SetActive(true);
                         condition.obj.GetComponent<InteractTarget>().enabled = true;
                         break;

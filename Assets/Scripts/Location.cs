@@ -17,7 +17,7 @@ public class Location : MonoBehaviour
         public string eventKey;
         public enum KeyPresentType
         {
-            Enable, Disable, DeactivateAction
+            Enable, Disable, DeactivateAction, ActivateAction
         }
         public KeyPresentType OnKeyPresent;
     }
