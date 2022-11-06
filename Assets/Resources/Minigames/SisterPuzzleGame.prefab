@@ -577,9 +577,13 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3534099025332261721, guid: fe735375419607f478096b179d055724, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6598939962033759571, guid: fe735375419607f478096b179d055724, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 8141985412738816892, guid: fe735375419607f478096b179d055724, type: 3}
       propertyPath: m_Pivot.x
