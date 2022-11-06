@@ -50,6 +50,8 @@ public class QuestSystem : MonoBehaviour
                 QuestList.instance.RemoveQuest("go_fishing", 2);
                 QuestList.instance.AddQuest("get_ready_for_fishing", "Найди удочку", 3);
                 break;
+
+
         }
     }
 
