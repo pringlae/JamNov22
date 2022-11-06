@@ -6,12 +6,17 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField] private GameObject _bubble;
     [SerializeField] private Transform _bubblePosition;
     private int _currentSpeech = -1;
+    private Item _hoveredItem = null;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == Player.instance.gameObject)
         {
             _bubble.SetActive(true);
+        }
+        else if (other.gameObject.layer == 8)
+        {
+            _hoveredItem = other.GetComponent<Item>();
         }
     }
 
@@ -20,6 +25,10 @@ public class NPC : MonoBehaviour, IInteractable
         if (other.gameObject == Player.instance.gameObject)
         {
             _bubble.SetActive(false);
+        }
+        else if (other.gameObject == _hoveredItem.gameObject)
+        {
+            _hoveredItem = null;
         }
     }
 
