@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetPiecesInOrder : Minigame
 {
-    [SerializeField] private List<Item> itemsToOrder = new List<Item>();
-    private static SpriteRenderer _greySprite = null;
+    [SerializeField] private List<PuzzlePiece> itemsToOrder = new List<PuzzlePiece>();
+    [SerializeField] private Text infoText;
+    private static Image _greySprite = null;
 
-    private Dictionary<Item, SpriteRenderer> _places = new Dictionary<Item, SpriteRenderer>();
+    private Dictionary<PuzzlePiece, Image> _places = new Dictionary<PuzzlePiece, Image>();
     private bool _solvable = true;
 
-    protected override void Awake()
+    protected override void StartMinigame()
     {
-        base.Awake();
+        base.StartMinigame();
         Camera.main.orthographicSize = 5;
+        infoText.gameObject.SetActive(false);
 
         if (_greySprite == null)
-            _greySprite = Resources.Load<SpriteRenderer>("GreySprite");
+            _greySprite = Resources.Load<Image>("GreySprite");
 
         var itemsOnLocation = Map.Instance.CurrentLocation.GetComponentsInChildren<Item>();
         foreach (var item in itemsToOrder)
@@ -24,40 +27,58 @@ public class SetPiecesInOrder : Minigame
             bool found = false;
             foreach (var itemOnLoc in itemsOnLocation)
             {
-                if (itemOnLoc.Id == item.Id)
+                if (itemOnLoc.Id == item.ItemId)
                 {
                     found = true;
                     break;
                 }
             }
+
+            var greyCopy = Object.Instantiate(_greySprite, transform);
+            greyCopy.name = item.ItemId;
+            greyCopy.rectTransform.anchoredPosition = item.rectTransform.anchoredPosition;
+            greyCopy.rectTransform.localScale = item.rectTransform.localScale;
+            greyCopy.rectTransform.sizeDelta = item.rectTransform.sizeDelta;
+            greyCopy.sprite = item.Sprite;
+            
             if (found)
             {
-                var greyCopy = Object.Instantiate(_greySprite, transform);
-                greyCopy.transform.position = item.transform.position;
-                _greySprite.sprite = item.Sprite;
-                item.transform.position = new Vector3(Random.value * 10 - 5, Random.value * 10 - 5, 0);
+                item.rectTransform.anchoredPosition += new Vector2(Random.value * 500 - 250, Random.value * 500 - 250);
                 _places[item] = greyCopy;
             }
             else
             {
                 item.gameObject.SetActive(false);
                 _solvable = false;
+                enabled = false;
+                infoText.text = "Недостаточно деталей, чтобы собрать пазл";
+                infoText.gameObject.SetActive(true);
             }
         }
+
+        infoText.text = "Пазл собран!";
+
+        foreach (var item in itemsToOrder)
+            item.transform.SetAsLastSibling();
+    }
+
+    private void Update()
+    {
+        infoText.gameObject.SetActive(CheckEverythingInPlace());
     }
 
     public override void Close()
     {
         if (_solvable)
-        {
-            bool everythingInPlace = true;
-            foreach (var entry in _places)
-                if (Vector3.Distance(entry.Key.transform.position, entry.Value.transform.position) > 1)
-                {
-                    everythingInPlace = false;
-                    break;
-                }
-            _success = everythingInPlace;
-        }
+            _success = CheckEverythingInPlace();
+        base.Close();
+    }
+
+    private bool CheckEverythingInPlace()
+    {
+        foreach (var entry in _places)
+            if (Vector3.Distance(entry.Key.rectTransform.anchoredPosition, entry.Value.rectTransform.anchoredPosition) > 20)
+                return false;
+        return true;
     }
 }

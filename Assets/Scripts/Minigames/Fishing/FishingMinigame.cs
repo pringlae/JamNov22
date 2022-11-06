@@ -12,9 +12,9 @@ public class FishingMinigame : Minigame
 
     private List<Fish> _spawnedFishes;
 
-    protected override void Awake()
+    protected override void StartMinigame()
     {
-        base.Awake();
+        base.StartMinigame();
         for (int i = 0; i < _spawnFishCount - _catched; i++)
         {
             var newFish = _fishPrefabs[Random.Range(0, _fishPrefabs.Length)];

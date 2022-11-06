@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class PuzzlePiece : MonoBehaviour
+public class PuzzlePiece : MonoBehaviour, IPointerDownHandler
 {
-    public int ItemId;
+    public string ItemId;
+    public Sprite Sprite { get; private set; }
+    public RectTransform rectTransform { get; private set; }
 
     private Vector3 _screenPoint, _offset;
     private Vector3 _startScale;
@@ -13,13 +17,16 @@ public class PuzzlePiece : MonoBehaviour
     private void Awake()
     {
         _startScale = transform.localScale;
+        Sprite = GetComponent<Image>().sprite;
+        rectTransform = GetComponent<RectTransform>();
     }
 
-    public void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
         _offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z));
-        transform.localScale = _startScale * 1.2f;
+        transform.localScale = _startScale * 1.03f;
         _isDragging = true;
+        transform.SetAsLastSibling();
     }
 
     void Update()
