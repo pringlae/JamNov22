@@ -15,12 +15,12 @@ public class DialogueBubble : PopupElement
     private void Awake()
     {
         instance = this;
+        _textMesh = GetComponentInChildren<TextMeshProUGUI>();
+        _transform = GetComponent<RectTransform>();
     }
     private void Start()
     {
         _camera = Camera.main;
-        _textMesh = GetComponentInChildren<TextMeshProUGUI>();
-        _transform = GetComponent<RectTransform>();
     }
 
     public void Setup(Vector3 position, string text)

@@ -7,17 +7,24 @@ public class Help : PopupElement
 {
     public static Help instance;
     [SerializeField] private TextMeshProUGUI _textMesh;
-    [SerializeField] private string[] _hints;
+    private string[] _hints;
+    private int _hintIndex = 0;
 
     private void Awake()
     {
         instance = this;
+    }
 
-        _textMesh.text = _hints[0];
+    public void SetHints(params string[] hints)
+    {
+        _hints = hints;
+        _hintIndex = 0;
     }
 
     public void Show()
     {
+        _textMesh.text = _hints[_hintIndex];
+        _hintIndex = (_hintIndex + 1) % _hints.Length;
         ShowHide(true);
     }
 
