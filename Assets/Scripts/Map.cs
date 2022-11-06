@@ -7,7 +7,6 @@ public class Map : MonoBehaviour
 {
     public static Map Instance;
     [SerializeField] private Location _startLocation;
-    [SerializeField] private int _maxLocationsLoaded;
     [SerializeField] private TextMeshProUGUI _locationNameText;
     [SerializeField] private Fader _fader;
 
@@ -38,17 +37,8 @@ public class Map : MonoBehaviour
         yield return StartCoroutine(_fader.FadeIn());
 
         Location locationPrefab = _loadedLocations.Find((loc) => loc.Id == location.Id);
-        if (locationPrefab != null)
-            _loadedLocations.Remove(locationPrefab);
-        else
-        {
-            while (_loadedLocations.Count >= _maxLocationsLoaded)
-            {
-                Destroy(_loadedLocations[0].gameObject);
-                _loadedLocations.RemoveAt(0);
-            }
+        if (locationPrefab == null)
             locationPrefab = Object.Instantiate(location, transform);
-        }
         _loadedLocations.Add(locationPrefab);
         CurrentLocation = locationPrefab;
 

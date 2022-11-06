@@ -12,9 +12,9 @@ public class Phone : Minigame
 
     private string _currentNumber, _bubbleText;
 
-    protected override void Awake()
+    protected override void StartMinigame()
     {
-        base.Awake();
+        base.StartMinigame();
         _currentNumber = "";
         _bubbleText = "";
     }

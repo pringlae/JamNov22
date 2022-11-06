@@ -10,13 +10,16 @@ public abstract class Minigame : MonoBehaviour
 
     public virtual void Launch(System.Action<bool> onCompleted)
     {
-        Object.Instantiate(this)._onCompleted = onCompleted;
+        var instance = Object.Instantiate(this, MinigameCanvas.instance.transform);
+        instance._onCompleted = onCompleted;
+        instance.transform.SetAsFirstSibling();
+        instance.StartMinigame();
     }
 
-    protected virtual void Awake()
+    protected virtual void StartMinigame()
     {
         _success = false;
-        MinigameCanvas.instance.Setup(Close);
+        MinigameCanvas.instance.Setup(this);
         Player.instance.gameObject.SetActive(false);
         Camera.main.transform.position = new Vector3(0, 0, -10);
     }

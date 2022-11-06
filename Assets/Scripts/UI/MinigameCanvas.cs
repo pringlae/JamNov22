@@ -7,7 +7,7 @@ public class MinigameCanvas : MonoBehaviour
     public static MinigameCanvas instance;
 
     [SerializeField] private GameObject _mainGameCanvas;
-    System.Action _onClick;
+    Minigame _currentMinigame;
     float prevCameraSize;
 
     private void Awake()
@@ -16,21 +16,22 @@ public class MinigameCanvas : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Setup(System.Action onClick)
+    public void Setup(Minigame minigame)
     {
-        _onClick = onClick;
+        _currentMinigame = minigame;
         prevCameraSize = Camera.main.orthographicSize;
         _mainGameCanvas.gameObject.SetActive(false);
         Map.Instance.gameObject.SetActive(false);
         gameObject.SetActive(true);
+        minigame.gameObject.SetActive(true);
     }
 
     public void OnCloseClick()
     {
+        _currentMinigame.Close();
         Camera.main.orthographicSize = prevCameraSize;
         _mainGameCanvas.gameObject.SetActive(true);
         Map.Instance.gameObject.SetActive(true);
-        _onClick.Invoke();
         gameObject.SetActive(false);
     }
 }
