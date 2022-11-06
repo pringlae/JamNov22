@@ -63,6 +63,8 @@ public class Map : MonoBehaviour
 
     public void UpdateItemsOnLocation()
     {
+        if (CurrentLocation == null) return;
+        
         foreach (var condition in CurrentLocation.objectConditions)
         {
             if (QuestSystem.IsEventCompleted(condition.eventKey))
