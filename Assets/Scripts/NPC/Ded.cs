@@ -8,6 +8,8 @@ public class Ded : NPC
     public static Ded instance;
     [SerializeField] protected DialogueData[] _dialogues;
 
+    int _currentDialogueIndex;
+
 
     private void Awake()
     {
@@ -23,18 +25,21 @@ public class Ded : NPC
             }
             if (QuestSystem.IsEventCompleted("item_taken_tackle"))
             {
+                _currentDialogueIndex = 2;
                 _dialogueData = _dialogues[2];
                 Player.instance.CanInteract(instance);
                 Activate();
             }
             if (QuestSystem.IsEventCompleted("item_taken_stick3"))
             {
+                _currentDialogueIndex = 1;
                 _dialogueData = _dialogues[1];
                 Player.instance.CanInteract(instance);
                 Activate();
             }
             if (QuestSystem.IsEventCompleted("item_taken_bucket"))
             {
+                _currentDialogueIndex = 0;
                 _dialogueData = _dialogues[0];
                 Player.instance.CanInteract(instance);
                 Activate();
@@ -64,6 +69,7 @@ public class Ded : NPC
         if (_currentSpeech >= _dialogueData.speeches.Length)
         {
             StopDialogue();
+            QuestSystem.OnQuestEvent("ded_dialogue_end_" + _currentDialogueIndex);
             return;
         }
         var speech = _dialogueData.speeches[_currentSpeech];
