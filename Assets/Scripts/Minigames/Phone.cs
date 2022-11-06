@@ -35,7 +35,7 @@ public class Phone : Minigame
         {
             if (_currentNumber == _numberStandard)
             {
-                if (QuestSystem.IsEventCompleted("взял купон"))
+                if (QuestSystem.IsEventCompleted("magazineInspected"))
                 {
                     _success = true;
                     _bubbleText = "Ждите доставку!";
