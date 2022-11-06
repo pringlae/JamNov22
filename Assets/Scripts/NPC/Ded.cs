@@ -27,7 +27,7 @@ public class Ded : NPC
                 Player.instance.CanInteract(instance);
                 Activate();
             }
-            if (QuestSystem.IsEventCompleted("item_taken_tacle"))
+            if (QuestSystem.IsEventCompleted("item_taken_tackle"))
             {
                 _dialogueData = _dialogues[1];
                 Player.instance.CanInteract(instance);
