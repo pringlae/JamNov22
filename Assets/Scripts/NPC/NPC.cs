@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour, IInteractable
     {
         if (other.gameObject == Player.instance.gameObject)
         {
-            _bubble.SetActive(true);
+            //_bubble.SetActive(true);
         }
         else if (other.gameObject.layer == 8)
         {
@@ -24,7 +24,7 @@ public class NPC : MonoBehaviour, IInteractable
     {
         if (other.gameObject == Player.instance.gameObject)
         {
-            _bubble.SetActive(false);
+            //_bubble.SetActive(false);
         }
         else if (other.gameObject == _hoveredItem.gameObject)
         {
