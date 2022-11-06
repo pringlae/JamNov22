@@ -11,6 +11,7 @@ public class DialogueBubble : PopupElement
     private Camera _camera;
     private TextMeshProUGUI _textMesh;
     private RectTransform _transform;
+    private Transform anchor;
 
     [SerializeField] private Sprite _commonSprite;
     [SerializeField] private Sprite _forDedSprite;
@@ -28,32 +29,39 @@ public class DialogueBubble : PopupElement
         _camera = Camera.main;
     }
 
-    public void Setup(Vector3 position, string text)
+    public void Setup(Transform position, string text)
     {
         _image.sprite = _commonSprite;
         _textMesh.text = text;
-        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, position);
+        anchor = position;
         ShowHide(true);
     }
 
-    public void Setup(Vector3 position, string text, float time)
+    public void Setup(Transform position, string text, float time)
     {
         _image.sprite = _commonSprite;
         _textMesh.text = text;
-        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, position);
+        anchor = position;
         ShowHide(true);
         Invoke(nameof(Hide), time);
     }
 
-    public void Setup(Vector3 position, string text, bool isDed)
+    public void Setup(Transform position, string text, bool isDed)
     {
         _image.sprite = isDed ? _forDedSprite : _commonSprite;
 
         _textMesh.text = text;
-        _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, position);
+        anchor = position;
         ShowHide(true);
     }
 
+    private void Update()
+    {
+        if (canvasGroup.alpha > 0.1f)
+        {
+            _transform.anchoredPosition = RectTransformUtility.WorldToScreenPoint(_camera, anchor.position);
+        }
+    }
     public void Hide()
     {
         ShowHide(false);

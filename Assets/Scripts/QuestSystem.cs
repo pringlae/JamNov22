@@ -54,4 +54,15 @@ public class QuestSystem : MonoBehaviour
     }
 
     private static void PlayerSay(string text) => DialogueBubble.instance.Setup(Player.instance.DialoguePosition, text, 4);
+
+    private static void PlayerSay(params string[] texts) => instance.StartCoroutine(PlayerSayTextsImpl(texts));
+
+    private static IEnumerator PlayerSayTextsImpl(string[] texts)
+    {
+        foreach (var text in texts)
+        {
+            PlayerSay(text);
+            yield return new WaitForSeconds(4.5f);
+        }
+    }
 }

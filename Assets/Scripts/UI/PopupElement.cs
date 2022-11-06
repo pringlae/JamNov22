@@ -6,7 +6,7 @@ using UnityEngine;
 public class PopupElement : MonoBehaviour
 {
     [SerializeField] private float _fadeInTime = 0.3f, _fadeOutTime = 0.3f;
-    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] protected CanvasGroup canvasGroup;
     private WaitForEndOfFrame _waiter = new WaitForEndOfFrame();
     private Coroutine _switchVisibilityCoroutine = null;
 

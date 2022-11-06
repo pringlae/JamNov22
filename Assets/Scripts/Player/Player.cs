@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance { get; private set; }
 
-    public Vector3 DialoguePosition => dialoguePosition.position;
+    public Transform DialoguePosition => dialoguePosition;
     public bool CanMove { get; set; } = true;
 
     [SerializeField] private PlayerData playerData;

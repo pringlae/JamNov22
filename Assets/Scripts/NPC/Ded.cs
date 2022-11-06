@@ -67,7 +67,7 @@ public class Ded : NPC
             return;
         }
         var speech = _dialogueData.speeches[_currentSpeech];
-        var pos = speech.isPlayer ? Player.instance.DialoguePosition : _bubblePosition.position;
+        var pos = speech.isPlayer ? Player.instance.DialoguePosition : _bubblePosition;
         DialogueBubble.instance.Setup(pos, speech.text);
     }
 

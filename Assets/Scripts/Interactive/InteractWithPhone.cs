@@ -25,7 +25,7 @@ public class InteractWithPhone : InteractWithMinigame
                     QuestSystem.OnQuestEvent(_succesfullyCompletedQuestKey);
 
                 if (bubbleText != "")
-                    StartCoroutine(StartDialogue(_bubblePosition.position, bubbleText));
+                    StartCoroutine(StartDialogue(_bubblePosition, bubbleText));
             });
         else
         {
@@ -33,7 +33,7 @@ public class InteractWithPhone : InteractWithMinigame
         }
     }
 
-    private IEnumerator StartDialogue(Vector3 pos, string text)
+    private IEnumerator StartDialogue(Transform pos, string text)
     {
         yield return new WaitForSeconds(0.3f);
         _inDialogue = true;
