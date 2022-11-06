@@ -124,10 +124,13 @@ public class Player : MonoBehaviour
         interactTarget = target;
     }
 
-    public void CanNotInteract()
+    public void CanNotInteract(IInteractable target)
     {
-        interactionBubble.SetActive(false);
-        interactTarget = null;
+        if (interactTarget == target)
+        {
+            interactionBubble.SetActive(false);
+            interactTarget = null;
+        }
     }
 
     private void OnDisable()
