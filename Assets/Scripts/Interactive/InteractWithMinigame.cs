@@ -5,19 +5,19 @@ using UnityEngine;
 public class InteractWithMinigame : MonoBehaviour, IInteractable
 {
     [SerializeField] private Minigame _minigamePrefab;
-    [SerializeField] private string _succesfullyCompletedQuestKey;
+    [SerializeField] protected string _succesfullyCompletedQuestKey;
 
-    private bool _minigameCompleted;
+    protected bool _minigameCompleted;
 
     private void OnEnable()
     {
         _minigameCompleted = QuestSystem.IsEventCompleted(_succesfullyCompletedQuestKey);
     }
 
-    public void Activate()
+    public virtual void Activate()
     {
         if (!_minigameCompleted)
-            _minigamePrefab.Launch((success) => 
+            _minigamePrefab.Launch((success) =>
             {
                 if (success)
                     QuestSystem.OnQuestEvent(_succesfullyCompletedQuestKey);

@@ -6,7 +6,7 @@ public class InteractTarget : MonoBehaviour
     private IInteractable _interactScript;
     [SerializeField] private SpriteRenderer _highlight;
     private bool _nearBy = false;
-    
+
     virtual protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == Player.instance.gameObject)
@@ -23,7 +23,7 @@ public class InteractTarget : MonoBehaviour
         if (other.gameObject == Player.instance.gameObject)
         {
             _nearBy = false;
-            Player.instance.CanNotInteract();
+            Player.instance.CanNotInteract(_interactScript);
             if (_highlight != null) _highlight.enabled = false;
         }
     }

@@ -27,10 +27,10 @@ public class MinigameCanvas : MonoBehaviour
 
     public void OnCloseClick()
     {
-        _onClick.Invoke();
         Camera.main.orthographicSize = prevCameraSize;
         _mainGameCanvas.gameObject.SetActive(true);
         Map.Instance.gameObject.SetActive(true);
+        _onClick.Invoke();
         gameObject.SetActive(false);
     }
 }

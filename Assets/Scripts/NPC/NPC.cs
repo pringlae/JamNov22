@@ -48,7 +48,7 @@ public class NPC : MonoBehaviour, IInteractable
     private void StopDialogue()
     {
         DialogueBubble.instance.Hide();
-        Player.instance.CanNotInteract();
+        Player.instance.CanNotInteract(this);
         Player.instance.CanMove = true;
         _currentSpeech = -1;
     }
