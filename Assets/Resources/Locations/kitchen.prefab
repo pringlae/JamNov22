@@ -894,6 +894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mother2
       objectReference: {fileID: 0}
+    - target: {fileID: 7854101677176815135, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
       propertyPath: m_RootOrder
       value: 5
