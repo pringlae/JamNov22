@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 5
-  VisibleName: "\u0414\u0435\u0442\u0441\u043A\u0430\u044F"
+  VisibleName: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430"
   SpawnPoints:
   - {fileID: 4224464597103549420}
   CameraSize: 1.9
