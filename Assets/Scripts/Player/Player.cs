@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
     {
         facingDirection *= -1;
         rb.transform.Rotate(0.0f, 180.0f, 0.0f);
+        interactionBubble.transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
     private void SetVelocityX(float velocity)
