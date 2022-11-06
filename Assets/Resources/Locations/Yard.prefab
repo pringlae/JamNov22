@@ -168,6 +168,7 @@ MonoBehaviour:
   - {fileID: 5162895053532185706}
   CameraSize: 4
   CameraBounds: {fileID: 3306934363639404980}
+  objectConditions: []
 --- !u!1 &1635271285034991718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,11 +1087,11 @@ PrefabInstance:
       objectReference: {fileID: 356215590753573878}
     - target: {fileID: 1522938723157148965, guid: 096818e41d617f14d99a31b6c0f8906f, type: 3}
       propertyPath: m_Size.y
-      value: 2.8922775
+      value: 2.8407621
       objectReference: {fileID: 0}
     - target: {fileID: 1522938723157148965, guid: 096818e41d617f14d99a31b6c0f8906f, type: 3}
       propertyPath: m_Offset.y
-      value: -0.94613874
+      value: -0.22492409
       objectReference: {fileID: 0}
     - target: {fileID: 3871807243855789732, guid: 096818e41d617f14d99a31b6c0f8906f, type: 3}
       propertyPath: m_Name
@@ -1106,11 +1107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8920901776367521183, guid: 096818e41d617f14d99a31b6c0f8906f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.23
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 8920901776367521183, guid: 096818e41d617f14d99a31b6c0f8906f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 8920901776367521183, guid: 096818e41d617f14d99a31b6c0f8906f, type: 3}
       propertyPath: m_LocalPosition.z

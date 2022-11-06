@@ -44,6 +44,22 @@ public class Map : MonoBehaviour
         _loadedLocations.Add(locationPrefab);
         CurrentLocation = locationPrefab;
 
+        foreach (var condition in CurrentLocation.objectConditions)
+        {
+            if (!QuestSystem.IsEventCompleted(condition.eventKey))
+            {
+                if (condition.onlyDisable)
+                    condition.obj.GetComponent<InteractTarget>().enabled = false;
+                else
+                    condition.obj.SetActive(false);
+            }
+            else
+            {
+                condition.obj.SetActive(true);
+                condition.obj.GetComponent<InteractTarget>().enabled = true;
+            }
+        }
+
         _locationNameText.text = locationPrefab.VisibleName;
 
         foreach (var locPrefab in _loadedLocations)
