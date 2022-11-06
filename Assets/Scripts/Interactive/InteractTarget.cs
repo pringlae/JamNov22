@@ -9,6 +9,8 @@ public class InteractTarget : MonoBehaviour
 
     virtual protected void OnTriggerEnter2D(Collider2D other)
     {
+        if (!enabled) return;
+
         if (other.gameObject == Player.instance.gameObject)
         {
             _nearBy = true;
@@ -22,6 +24,8 @@ public class InteractTarget : MonoBehaviour
 
     virtual protected void OnTriggerExit2D(Collider2D other)
     {
+        if (!enabled) return;
+
         if (other.gameObject == Player.instance.gameObject)
         {
             _nearBy = false;
@@ -34,12 +38,16 @@ public class InteractTarget : MonoBehaviour
 
     void OnMouseOver()
     {
+        if (!enabled) return;
+
         PopupText.Instance.Setup(transform, Name);
         if (_highlight != null) _highlight.enabled = true;
     }
 
     void OnMouseExit()
     {
+        if (!enabled) return;
+        
         PopupText.Instance.Hide();
         if (!_nearBy && _highlight != null)
             _highlight.enabled = false;
