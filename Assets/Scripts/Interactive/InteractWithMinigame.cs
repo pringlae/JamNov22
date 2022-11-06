@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractWithMinigame : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Minigame _minigamePrefab;
+    [SerializeField] protected Minigame _minigamePrefab;
     [SerializeField] protected string _succesfullyCompletedQuestKey;
 
     protected bool _minigameCompleted;
