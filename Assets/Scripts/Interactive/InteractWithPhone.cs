@@ -25,16 +25,17 @@ public class InteractWithPhone : InteractWithMinigame
                     QuestSystem.OnQuestEvent(_succesfullyCompletedQuestKey);
 
                 if (bubbleText != "")
-                    StartDialogue(_bubblePosition.position, bubbleText);
+                    StartCoroutine(StartDialogue(_bubblePosition.position, bubbleText));
             });
         else
         {
-            StartDialogue(Player.instance.DialoguePosition, "Мне это больше не нужно.");
+            StartCoroutine(StartDialogue(Player.instance.DialoguePosition, "Мне это больше не нужно."));
         }
     }
 
-    private void StartDialogue(Vector3 pos, string text)
+    private IEnumerator StartDialogue(Vector3 pos, string text)
     {
+        yield return new WaitForSeconds(0.3f);
         _inDialogue = true;
         DialogueBubble.instance.Setup(pos, text);
         Player.instance.CanMove = false;

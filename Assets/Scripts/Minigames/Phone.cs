@@ -7,7 +7,6 @@ public class Phone : Minigame
 {
     [SerializeField] private TextMeshProUGUI _numberLabel;
     [SerializeField] private string _numberStandard;
-    [SerializeField] private Vector3 _bubblePosition;
     protected System.Action<bool, string> _onPnoneCompleted;
 
     private string _currentNumber, _bubbleText;
@@ -21,7 +20,10 @@ public class Phone : Minigame
 
     public virtual void Launch(System.Action<bool, string> onCompleted)
     {
-        Object.Instantiate(this)._onPnoneCompleted = onCompleted;
+        var instance = Object.Instantiate(this, MinigameCanvas.instance.transform);
+        instance._onPnoneCompleted = onCompleted;
+        instance.transform.SetAsFirstSibling();
+        instance.StartMinigame();
     }
 
     public void OnNumberButtonClick(string value)
