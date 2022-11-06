@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     private bool isJumping;
     private IInteractable interactTarget;
 
+    private int _animSpeedX = Animator.StringToHash("speedX");
+
     void Awake()
     {
         instance = this;
@@ -55,6 +57,7 @@ public class Player : MonoBehaviour
             }
         }
         CheckJumpMultiplier();
+        anim.SetFloat(_animSpeedX, Mathf.Abs(currentVelocity.x));
     }
 
     private void CheckIfShouldFlip(int xInput)
