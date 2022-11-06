@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: "\u041A\u0430\u043C\u0435\u043D\u044C"
+  Name: "\u0427\u0435\u0440\u0432\u0438"
   _highlight: {fileID: 0}
-  Id: 1
+  Id: Worms
 --- !u!61 &5166480813271970837
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b093db6ee3e214ba9b26c24f59a728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: "\u0412\u0435\u0434\u0440\u043E"
+  Name: "\u0421\u043D\u0430\u0441\u0442\u0438"
   _highlight: {fileID: 0}
-  Id: 1
+  Id: Tackle
 --- !u!61 &5166480813271970837
 BoxCollider2D:
   m_ObjectHideFlags: 0
