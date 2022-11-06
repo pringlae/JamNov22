@@ -16,24 +16,22 @@ public class QuestList : PopupElement
         instance = this;
     }
 
-    public void AddQuest(string name, string text)
+    public void AddQuest(string name, string text, float showAfter)
     {
         questOrder.Add(name);
         activeQuests[name] = text;
         UpdateText();
-        Show();
-
-        StartCoroutine(LaunchAfter(Close, 3));
+        StartCoroutine(LaunchAfter(Show, showAfter));
+        StartCoroutine(LaunchAfter(Close, showAfter + 3));
     }
 
-    public void RemoveQuest(string name)
+    public void RemoveQuest(string name, float showAfter)
     {
         questOrder.Remove(name);
         activeQuests.Remove(name);
         UpdateText();
-        Show();
-
-        StartCoroutine(LaunchAfter(Close, 3));
+        StartCoroutine(LaunchAfter(Show, showAfter));
+        StartCoroutine(LaunchAfter(Close, showAfter + 3));
     }
 
     public void Show()

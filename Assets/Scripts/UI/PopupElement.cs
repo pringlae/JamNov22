@@ -8,6 +8,7 @@ public class PopupElement : MonoBehaviour
     [SerializeField] private float _fadeInTime = 0.3f, _fadeOutTime = 0.3f;
     [SerializeField] private CanvasGroup canvasGroup;
     private WaitForEndOfFrame _waiter = new WaitForEndOfFrame();
+    private Coroutine _switchVisibilityCoroutine = null;
 
     virtual public void ShowHide(bool show)
     {
@@ -17,10 +18,12 @@ public class PopupElement : MonoBehaviour
             return;
         }
 
-        StopAllCoroutines();
+        if (_switchVisibilityCoroutine != null)
+            StopCoroutine(_switchVisibilityCoroutine);
         if (show)
-            StartCoroutine(On());
-        else StartCoroutine(Off());
+            _switchVisibilityCoroutine = StartCoroutine(On());
+        else 
+            _switchVisibilityCoroutine = StartCoroutine(Off());
     }
 
     private IEnumerator Off()
@@ -31,6 +34,7 @@ public class PopupElement : MonoBehaviour
             yield return _waiter;
         }
         canvasGroup.blocksRaycasts = false;
+        _switchVisibilityCoroutine = null;
         yield break;
     }
     private IEnumerator On()
@@ -41,6 +45,7 @@ public class PopupElement : MonoBehaviour
             canvasGroup.alpha += Time.deltaTime / _fadeInTime;
             yield return _waiter;
         }
+        _switchVisibilityCoroutine = null;
         yield break;
     }
 }

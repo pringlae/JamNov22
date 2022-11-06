@@ -16,7 +16,14 @@ public class QuestSystem : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(DelayedStart());
+    }
+
+    private IEnumerator DelayedStart()
+    {
+        yield return new WaitForSeconds(1);
         OnQuestEvent("start");
+
     }
 
     public static bool IsEventCompleted(string id) => instance.completedEvents.Contains(id);
@@ -30,18 +37,18 @@ public class QuestSystem : MonoBehaviour
         {
             case "start":
                 PlayerSay("Какой отличный день! Вот бы сходить на рыбалку");
-                QuestList.instance.AddQuest("go_fishing", "Пойти на рыбалку");
+                QuestList.instance.AddQuest("go_fishing", "Пойти на рыбалку", 3);
                 Help.instance.SetHints("Отправляйся к озеру");
                 break;
             case "interact_first_time_lake":
                 PlayerSay("Так, а как рыбу ловить? Кажется я что-то забыл...");
-                QuestList.instance.RemoveQuest("go_fishing");
-                QuestList.instance.AddQuest("get_ready_for_fishing", "Найди удочку");
+                QuestList.instance.RemoveQuest("go_fishing", 2);
+                QuestList.instance.AddQuest("get_ready_for_fishing", "Найди удочку", 3);
                 break;
             case "interact_barn_lock":
                 PlayerSay("Какой отличный день! Вот бы сходить на рыбалку");
-                QuestList.instance.RemoveQuest("go_fishing");
-                QuestList.instance.AddQuest("get_ready_for_fishing", "Найди удочку");
+                QuestList.instance.RemoveQuest("go_fishing", 2);
+                QuestList.instance.AddQuest("get_ready_for_fishing", "Найди удочку", 3);
                 break;
         }
     }
