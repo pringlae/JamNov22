@@ -21,9 +21,9 @@ public class Ded : NPC
             {
                 return;
             }
-            if (QuestSystem.IsEventCompleted("item_taken_bucket"))
+            if (QuestSystem.IsEventCompleted("item_taken_stick3"))
             {
-                _dialogueData = _dialogues[0];
+                _dialogueData = _dialogues[2];
                 Player.instance.CanInteract(instance);
                 Activate();
             }
@@ -33,9 +33,9 @@ public class Ded : NPC
                 Player.instance.CanInteract(instance);
                 Activate();
             }
-            if (QuestSystem.IsEventCompleted("item_taken_stick3"))
+            if (QuestSystem.IsEventCompleted("item_taken_bucket"))
             {
-                _dialogueData = _dialogues[2];
+                _dialogueData = _dialogues[0];
                 Player.instance.CanInteract(instance);
                 Activate();
             }
