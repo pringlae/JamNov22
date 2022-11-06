@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 7854101677176815138}
   - component: {fileID: 7854101677176815133}
   - component: {fileID: 7854101677176815139}
-  - component: {fileID: 7374265297431643205}
   - component: {fileID: 655229630305784619}
   m_Layer: 0
   m_Name: NPC Ded
@@ -225,20 +224,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.083408, y: 2}
   m_EdgeRadius: 0
---- !u!114 &7374265297431643205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7854101677176815135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb4bbb7c6bab2d942b5089a3b68c4a74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  _highlight: {fileID: 0}
 --- !u!114 &655229630305784619
 MonoBehaviour:
   m_ObjectHideFlags: 0

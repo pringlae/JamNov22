@@ -15,6 +15,15 @@ public class Ded : NPC
     }
     protected override void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject == Player.instance.gameObject)
+        {
+            if (QuestSystem.IsEventCompleted("item_taken_bucket"))
+            {
+                _dialogueData = _dialogues[0];
+                Player.instance.CanInteract(instance);
+                Activate();
+            }
+        }
     }
 
     protected override void OnTriggerExit2D(Collider2D other)
@@ -24,6 +33,7 @@ public class Ded : NPC
     public static void StartIteraction()
     {
         Player.instance.CanInteract(instance);
+
     }
 
     public override void Activate()
@@ -31,7 +41,7 @@ public class Ded : NPC
         if (_currentSpeech == -1)
         {
 
-            _dialogueData = _dialogues[0];
+
             StartDialogue();
         }
         _currentSpeech++;
