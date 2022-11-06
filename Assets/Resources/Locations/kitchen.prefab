@@ -58,7 +58,7 @@ MonoBehaviour:
   objectConditions:
   - obj: {fileID: 2042152476929612007}
     eventKey: item_taken_bucket
-    OnKeyPresent: 1
+    OnKeyPresent: 0
 --- !u!1 &375761666910815785
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +666,10 @@ PrefabInstance:
       propertyPath: Name
       value: "\u041F\u0440\u0438\u0445\u043E\u0436\u0430\u044F"
       objectReference: {fileID: 0}
+    - target: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.82
+      objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
       value: Corridor SP
@@ -896,23 +900,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.46156
+      value: 0.7580662
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.46156
+      value: 0.7580662
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.46156
+      value: 0.7580662
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.565
+      value: 1.1291
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.54
+      value: -2.8224
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 4085f39c0d61ff54f992dda27b0d93be, type: 3}
       propertyPath: m_LocalPosition.z

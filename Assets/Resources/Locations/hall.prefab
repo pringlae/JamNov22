@@ -56,7 +56,13 @@ MonoBehaviour:
   - {fileID: 4224464597103549420}
   CameraSize: 3
   CameraBounds: {fileID: 292823235389160709}
-  objectConditions: []
+  objectConditions:
+  - obj: {fileID: 5906564101473527528}
+    eventKey: item_taken_bucket
+    OnKeyPresent: 1
+  - obj: {fileID: 3312154742821892796}
+    eventKey: item_taken_bucket
+    OnKeyPresent: 0
 --- !u!1 &375761666910815785
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4112671801929307940
 Transform:
   m_ObjectHideFlags: 0
@@ -961,20 +967,24 @@ PrefabInstance:
       propertyPath: Name
       value: "\u041F\u0440\u0438\u0445\u043E\u0436\u0430\u044F"
       objectReference: {fileID: 0}
+    - target: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.581
+      objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
       value: Corridor SP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
---- !u!4 &4224464597103549420 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
-  m_PrefabInstance: {fileID: 3228520008485454206}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4479501044491289970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1361322529706296332, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+  m_PrefabInstance: {fileID: 3228520008485454206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4224464597103549420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
   m_PrefabInstance: {fileID: 3228520008485454206}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4397495781784492279
@@ -1058,6 +1068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14a00d7e65d33ca428b50824d98f9fe2, type: 3}
+--- !u!1 &5906564101473527528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7854101677176815135, guid: 14a00d7e65d33ca428b50824d98f9fe2, type: 3}
+  m_PrefabInstance: {fileID: 4397495781784492279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5906564101473527509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7854101677176815138, guid: 14a00d7e65d33ca428b50824d98f9fe2, type: 3}

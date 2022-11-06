@@ -900,6 +900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 358454711406678550}
     m_Modifications:
+    - target: {fileID: 7374265297431643205, guid: f18b4d072ed3b614a809f7649adea2bc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815135, guid: f18b4d072ed3b614a809f7649adea2bc, type: 3}
       propertyPath: m_Name
       value: stick
