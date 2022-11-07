@@ -172,8 +172,11 @@ MonoBehaviour:
   CameraBounds: {fileID: 3306934363639404980}
   objectConditions:
   - obj: {fileID: 5945161499102262112}
-    eventKey: item_taken_bucket
-    OnKeyPresent: 0
+    eventKey: ded_dialogue_end_0
+    OnKeyPresent: 3
+  - obj: {fileID: 5945161499102262112}
+    eventKey: ded_dialogue_end_1
+    OnKeyPresent: 2
   - obj: {fileID: 4931640205663763262}
     eventKey: phone
     OnKeyPresent: 0
@@ -605,23 +608,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970838, guid: 9846a2a86d2dbe5479aa6cb7e3c70974, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1.02915
       objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970838, guid: 9846a2a86d2dbe5479aa6cb7e3c70974, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1.02915
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166480813271970838, guid: 9846a2a86d2dbe5479aa6cb7e3c70974, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10.875702
       objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970838, guid: 9846a2a86d2dbe5479aa6cb7e3c70974, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.74
+      value: 6.861
       objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970838, guid: 9846a2a86d2dbe5479aa6cb7e3c70974, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.51
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970838, guid: 9846a2a86d2dbe5479aa6cb7e3c70974, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8472277
+      value: 1.8472
       objectReference: {fileID: 0}
     - target: {fileID: 5166480813271970838, guid: 9846a2a86d2dbe5479aa6cb7e3c70974, type: 3}
       propertyPath: m_LocalRotation.w
@@ -841,6 +848,10 @@ PrefabInstance:
       propertyPath: Name
       value: "\u0421\u0430\u0440\u0430\u0439"
       objectReference: {fileID: 0}
+    - target: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
       value: Barn SP
@@ -880,6 +891,10 @@ PrefabInstance:
     - target: {fileID: 7854101677176815135, guid: 17d16567920d7934985c4675e30b9e2a, type: 3}
       propertyPath: m_Name
       value: stick2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854101677176815135, guid: 17d16567920d7934985c4675e30b9e2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7854101677176815138, guid: 17d16567920d7934985c4675e30b9e2a, type: 3}
       propertyPath: m_RootOrder
@@ -1090,6 +1105,10 @@ PrefabInstance:
     - target: {fileID: 1361322529706296335, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: Name
       value: "\u0414\u043E\u043C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.04
       objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
@@ -1404,6 +1423,10 @@ PrefabInstance:
     - target: {fileID: 1361322529706296335, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: Name
       value: "\u0414\u0435\u0440\u0435\u0432\u043D\u044F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616319461673294482, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 7440143054008841723, guid: ed5b83da86eb9ab46847c04bcc4185bb, type: 3}
       propertyPath: m_Name
